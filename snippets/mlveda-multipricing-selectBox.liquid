@@ -1,0 +1,193 @@
+{% if mlveda_code_flag == true %}
+
+<script>
+if("undefined" == typeof HTMLInputElement.prototype.realAddEventListener){
+HTMLInputElement.prototype.realAddEventListener = HTMLInputElement.prototype.addEventListener;
+}
+HTMLInputElement.prototype.addEventListener = function(a,b,c){ 
+    this.realAddEventListener(a,b,c); 
+    if(!window.lastListenerInfo){  window.lastListenerInfo = new Array()};
+	if(a.indexOf("change") != -1 && a.indexOf("mlveda") == -1 && $m(this).closest("form[action*='/cart/add']").length  > 0 && this.getAttribute("name") != "id" && pattern.test($m(this).val())){
+      var mlveda_selectbox_flag = false;
+		
+	  var allinputs = $m(this).parent().find($m(this)[0].nodeName.toLowerCase()).toArray();	  
+      if(allinputs.length == 1){
+		allinputs = $m(this).parent().parent().find($m(this)[0].nodeName.toLowerCase()).toArray();	
+      }
+      if(allinputs.length > 1){
+	  mlveda_selectbox_flag = allinputs.every((currentValue) => { return pattern.test(currentValue.value.trim()) })
+      if(mlveda_selectbox_flag && lastListenerInfo.length == 0){
+	  	window.lastListenerInfo.push({a : a, b : b , c : c});
+	    }
+      }
+    }
+};
+
+if("undefined" == typeof HTMLFormElement.prototype.realAddEventListener){
+HTMLFormElement.prototype.realAddEventListener = HTMLFormElement.prototype.addEventListener;
+}
+HTMLFormElement.prototype.addEventListener = function(a,b,c){ 
+    this.realAddEventListener(a,b,c); 
+    if(!window.lastFormListenerInfo){  window.lastFormListenerInfo = new Array()};
+    if(a.indexOf("change") != -1 && this.getAttribute("action").indexOf("/cart/add") != 1 && $m(this).find('fieldset.mlveda_country').length >0){
+	window.lastFormListenerInfo.push({a : a, b : b , c : c});
+//	console.log("inside form element");
+  }
+};
+
+//$(document).ready(function(){
+//window.pattern = /(jp|fr|ca|uk|ma|au|in)/;
+ // window.pattern = /^(do|sv|ee|fi|fr|gd|gp|gg|hu|is|im|il|kz|ke|kg|la|mo|mk|mh|mq|ms|ma|nl|ne|ng|no|pw|py|pl|pt|kn|st|sc|sg|sk|za|sr|sj|th|to|tm|tc|uz|vu|vn|zm|af|al|as|ao|ai|an|ag|ar|as|bb|by|aq|bm|bq|bv|au|vg|bs|cv|bh|cf|bd|cn|be|co|ba|ci|bw|dk|bn|dm|bi|cd|cm|ec|ca|eg|td|gq|cx|er|cc|et|cr|eu|ga|gh|cy|gi|dj|gu|eu|gt|fk|gn|fo|gw|gf|hm|pf|hn|gm|iq|ge|ie|de|jm|gr|jp|in|ki|id|lr|je|mw|lv|my|ly|mu|li|yt|mv|mx|mc|mn|mz|nr|np|ni|nu|nf|pk|na|ph|oc|pn|om|qa|pg|re|pr|sh|ro|ru|rw|sm|bl|rs|pm|sx|vc|gs|sa|sd|sl|se|si|tj|tz|sb|tt|sa|tn|es|gb|lk|va|ch|zw|sy|tw|tl|tg|tr|um|vi|ug|us|uy|ve|af|ax|dz|ad|am|aw|at|az|bz|bj|bt|bo|br|io|bg|bf|kh|ky|cl|km|cg|ck|hr|cu|cw|cz|fj|tf|gl|gy|ht|hk|ir|it|jo|kw|lb|ls|lt|lu|mg|ml|mt|mr|fm|md|me|mm|na|nc|nz|kp|mp|ps|pa|pe|lc|mf|ws|sn|so|kr|ss|sz|tk|tv|ua|ae|wf|eh|ye|intl)$/;
+var mlveda_condition_flag = false;
+var convert_currency = false;
+var mlveda_observer = new MutationObserver(function(mutations){
+			//console.log(mutations.length);
+		
+        
+			mutations.forEach(function(mutation) {
+		
+    		 if ( "undefined" != typeof mlvedaFlagCalled && mlvedaFlagCalled && "undefined" != typeof window.mlvedadefaultcurrency && window.mlvedadefaultcurrency ) {
+    			if ( !convert_currency && mutation.target.nodeName.toLowerCase() == "span" && mutation.target.classList.length > 0  && mutation.target.className.indexOf('money') != -1 ) {
+                  if ( !(mutation.target.getAttribute('data-currency')) ) {
+                  	convert_currency = true;
+                  }
+              	}
+                  
+              	if ( !convert_currency && mutation.target.querySelectorAll('span.money').length > 0) {
+                  mutation.target.querySelectorAll('span.money').forEach( (currentElem) => {
+                  	if ( !(currentElem.getAttribute('data-currency')) ) {
+                  		convert_currency = true;
+                  	}
+                  });
+              	 }
+        		}
+
+		if ( lets_remove_mlveda ) {
+                Array.from($m("body").find(':contains("mlveda_country")')).filter(
+                  (currentElement) => {
+                    if ( currentElement.childElementCount == 0 && $m(currentElement).parents("form[action*='/cart/add']").length == 0 && currentElement.nodeName != 'SCRIPT' && currentElement.parentElement) {
+                      if ( currentElement.parentElement.innerHTML.indexOf("mlveda_country:<") != - 1 || currentElement.parentElement.innerHTML.indexOf("mlveda_country<") != - 1 ) {
+                          var match = currentElement.parentElement.innerHTML.match(regex_mlveda_country2);
+                      } else {
+                          var match = currentElement.parentElement.innerHTML.match(regex_mlveda_country1);
+                      }
+                      if ( match ) {
+                          currentElement.parentElement.innerHTML = currentElement.parentElement.innerHTML.replace(match[0],"");
+                          lets_remove_mlveda = false;
+                      }
+                    }
+                  }
+                );
+              }
+                    
+               $m("fieldset:not(.mlveda_country,.vichitra)").each(function(){
+                      var flag = 1;
+                      //console.log("select "+this);
+                      //console.log($m(this).children().length);
+                      $m(this).find("input").each(function(option){
+					 
+                        //console.log($m(this).parent().attr("class"));
+                        //if(($(this).parent().attr("class") !== 'mlveda_country') || ($(this).parent().attr("class") !== 'vichitra')){
+                        //console.log("option "+this);
+						 var str = $m(this).val().trim();
+
+						if(str !== ""){
+                       
+							//console.log("value "+str);
+							var res = pattern.test(str);
+							//console.log("result "+res);
+							if(res){
+							  flag=2;
+								return;
+							}
+							else{
+							  //console.log("in else "+str);
+							  $m(this).parents("fieldset").addClass("vichitra");
+								flag = 0;
+								return false;
+							}
+						}
+                      //}
+                      });
+                      //console.log("flag "+flag);
+                      if(flag==2){
+                        //console.log("it's time for magic");
+                        //console.log($m(this).parent());
+                        $m(this).parent().css("display" , "none");
+                        $m(this).addClass("mlveda_country");
+                      //$m(this).val("si");
+                         //$m('input:radio[name=mlveda_country][value=si]').click();
+                        //$m('label[for=ProductSelect-option-mlveda_country-intl]').trigger("click");
+                        
+                      /*  var event = new Event("click" , {bubble : true});
+                        var mlveda_select = this;
+                        mlveda_select.dispatchEvent(event);		*/
+                        
+                        var mlveda_interval = setInterval(function() {
+                   //console.log("setInterval 1");
+                   //if($ && $._data($("form[action*='/cart/add'] fieldset input")[0]).events && $._data($("form[action*='/cart/add'] fieldset input")[0]).events.change[0]){
+		if(("undefined" != typeof lastListenerInfo && lastListenerInfo.length > 0 && lastListenerInfo[0].a == "change") || ("undefined" != typeof lastFormListenerInfo && lastFormListenerInfo.length > 0 && lastFormListenerInfo[0].a == "change")){
+                     clearInterval(mlveda_interval);
+                      var event1 = new Event("change", {
+                        bubbles: true
+                      });
+                     mlveda_condition_flag = true;
+		     lastListenerInfo = [];
+		     lastFormListenerInfo = [];
+                     //console.log("in set timeout 1");
+
+                     $m("fieldset.mlveda_country").each(function(){
+                     	if(country && country !== null && $m(this).find("input:radio[value="+country+"]").length > 0){
+                          $m(this).attr("mlveda_country_found","true");
+                          //console.log("vf : ",$m(this).find("input:radio[value="+country+"]"));	
+                          $m(this).find("input:radio[value="+country+"]").click();
+                          $m(this).find("input:radio[value="+country+"]").val(country).trigger("click");
+                          $m("fieldset.mlveda_country").val(country)[0].dispatchEvent(new Event("change",{bubbles : true}));
+                        }
+                        else if(continent && continent !== null && $m(this).find("input:radio[value="+continent+"]").length > 0){
+                          $m(this).attr("mlveda_continent_found","true");
+                        	//console.log($m(this).find("input:radio[value="+continent+"]"));	
+                          $m(this).find("input:radio[value="+continent+"]").click();
+                          $m(this).find("input:radio[value="+continent+"]").val(continent).trigger("click");
+                          $m("fieldset.mlveda_country").val(continent)[0].dispatchEvent(new Event("change",{bubbles : true}));
+                        }
+                        else if(country !== null && continent !== null && $m(this).find("input:radio[value=intl]").length > 0){
+                         	//console.log($m(this).find("input:radio[value=intl]"));
+                          $m(this).find("input:radio[value=intl]").click()
+						  $m(this).find("input:radio[value='intl']").val("intl").trigger("click");
+                          $m("fieldset.mlveda_country").val("intl")[0].dispatchEvent(new Event("change",{bubbles : true}));
+                        }
+                     });
+					 
+                 	} 
+                }, 100);
+                        
+                     
+                            
+                      }
+                    });
+            });
+ if ( convert_currency ) {
+    console.log("mlvedaload call !!!");
+  	if(typeof Currency !== "undefined" && typeof Currency.moneyFormats !== "undefined") { mlvedaload(); }
+    convert_currency = false;
+  }
+        });
+	
+	
+	mlveda_observer.observe(document.querySelector('body'), { childList: true , subtree : true});	
+ //});
+window.addEventListener("load" ,function(){
+    setTimeout(function(){
+	{{ settings.mlvedaMCP_isSaleClass }} && $m("<style type='text/css'>{{ settings.mlvedaMCP_saleClass }}{ visibility : visible; }</style>").appendTo("head");
+    {{ settings.mlvedaMCP_isSaveAmount }} && $m("<style type='text/css'>{{ settings.mlvedaMCP_saveAmountClass }}{ visibility : visible; }</style>").appendTo("head");
+ {{ settings.mlvedaMCP_isSalePercentage }} && $m("<style type='text/css'>{{ settings.mlvedaMCP_salePercentageClass }}{ visibility : visible; }</style>").appendTo("head");     
+	 $m("<style type=\"text/css\">span.money{ display: inline; }</style>").appendTo("head");
+    	 $m("<style type=\"text/css\">  div.mlvedaform span.money {visibility:visible;}</style>").appendTo("head");
+         $m("<style type=\"text/css\">  form[action*='/cart/add'] [type='submit']{visibility:visible;}</style>").appendTo("head");
+    },2000);
+  });
+
+  </script>
+
+{% endif %}

@@ -1,0 +1,1877 @@
+{
+  "current": {
+    "checkout_body_font": "Helvetica Neue",
+    "mlvedaMCP_priceColor": "#1c1d1d",
+    "type_header_base_size": 34,
+    "color_large_image_bg": "#dedfe1",
+    "checkout_call_to_action_color": "#a26b25",
+    "mlvedaACS_autoSwitch": false,
+    "animate_underlines": false,
+    "checkout_header_image": "",
+    "show_decimal_places": true,
+    "show_breadcrumbs": true,
+    "type_base_accent_transform": true,
+    "icon_weight": "2px",
+    "color_footer_text": "#2c2c2c",
+    "quick_shop_text": "Quick view",
+    "mlvedaMCP_recommendation_Recentlyviewed_URLHandle": "recommendation",
+    "share_facebook": true,
+    "checkout_accent_color": "#111111",
+    "mlvedaACS_isCustomized": true,
+    "color_button_text": "#ffffff",
+    "mlvedaMCP_salePercentageClass": ".",
+    "show_breadcrumbs_collection_link": true,
+    "color_drawer_border": "#f0f1f3",
+    "mlvedaMCP_textwithPrice": "",
+    "checkout_logo_size": "medium",
+    "mlvedaACS_borderLook": false,
+    "type_header_accent_transform": true,
+    "checkout_button_color": "#111111",
+    "mlvedaMCP_saveAmountClass": ".grid-product__tag--sale",
+    "share_twitter": true,
+    "cart_type": "drawer",
+    "checkout_input_background_color_mode": "white",
+    "mlvedaACS_textColor": "inherit",
+    "mlvedaACS_flagStyle": "circle",
+    "mlvedaACS_isMessageDisplay": true,
+    "animate_page_transitions": true,
+    "color_small_image_bg": "#ffffff",
+    "color_image_1_opacity": 26,
+    "animate_sections_background_style": "zoom-fade",
+    "mlvedaACS_roundingrules": "{\"AUD\":{\"reference\":1,\"rule\":1},\"EUR\":{\"reference\":1,\"rule\":0.95},\"GBP\":{\"reference\":1,\"rule\":1},\"USD\":{\"reference\":1,\"rule\":1}}",
+    "animate_sections_text_style": "rise-up",
+    "mlvedaACS_messageColor": "inherit",
+    "checkout_heading_font": "Helvetica Neue",
+    "type_base_line_height": 1.6,
+    "sku_enable": false,
+    "checkout_body_background_image": "",
+    "color_footer": "#f0f1f3",
+    "color_image_1": "#000000",
+    "color_image_2": "#000000",
+    "default_currency": "CAD",
+    "mlvedaMCP_isSalePercentage": false,
+    "type_header_line_height": 1.2,
+    "collection_color_swatches": true,
+    "mlvedaACS_roundDecimal": false,
+    "color_input": "#ffffff",
+    "mlvedaMCP_isSaleClass": false,
+    "color_image_bg": "#000000",
+    "supported_currencies": "CAD USD EUR",
+    "animate_buttons": true,
+    "color_button": "#111111",
+    "product_grid_image_size": "square",
+    "mlvedaACS_messageContent": "<<shop.name>> process all orders in <<shop.currency>>. While the content of your cart is currently displayed in <<shop.selected_currency>>, you will checkout using <<shop.currency>> at the most current exchange rate.",
+    "color_image_2_opacity": 0,
+    "inventory_transfers_enable": true,
+    "checkout_body_background_color": "#ffffff",
+    "checkout_sidebar_background_image": "",
+    "color_modal_overlays": "#aeb1b8",
+    "animate_images": false,
+    "mlvedaACS_os2": false,
+    "mlvedaMCP_optionHTMLTag": "",
+    "cart_additional_buttons": true,
+    "mlvedaACS_positionTop": "10px",
+    "sections": {
+      "1499790529450": {
+        "settings": {
+          "video_url": "",
+          "title_size": 62,
+          "overlay_opacity": 0,
+          "link": "",
+          "title": "sustainable living simplified",
+          "subheading": "Toxicant Free. Infinitely recyclable. .",
+          "link_text": "Watch",
+          "section_height": "650px",
+          "mobile_height": "auto",
+          "text_align": "vertical-center horizontal-center"
+        },
+        "disabled": true,
+        "type": "hero-video"
+      },
+      "1635344823cc1facef": {
+        "settings": {
+          "divider": true,
+          "title": "Collection list",
+          "enable_gutter": false
+        },
+        "blocks": {
+          "1635344823cc1facef-2": {
+            "settings": {
+              "size": "square-small",
+              "collection": "tableware",
+              "focal_point": "center center"
+            },
+            "type": "collection"
+          },
+          "1635344823cc1facef-3": {
+            "settings": {
+              "size": "square-small",
+              "collection": "shop",
+              "focal_point": "center center"
+            },
+            "type": "collection"
+          },
+          "1635344823cc1facef-0": {
+            "settings": {
+              "size": "square-small",
+              "collection": "food-storage",
+              "focal_point": "center center"
+            },
+            "type": "collection"
+          },
+          "1635344823cc1facef-1": {
+            "settings": {
+              "size": "square-small",
+              "collection": "lunch-containers",
+              "focal_point": "center center"
+            },
+            "type": "collection"
+          },
+          "1635344823cc1facef-4": {
+            "settings": {
+              "size": "square-small",
+              "collection": "on-sale",
+              "focal_point": "center center"
+            },
+            "disabled": true,
+            "type": "collection"
+          },
+          "1635344823cc1facef-5": {
+            "settings": {
+              "size": "square-small",
+              "collection": "gifts-under-100",
+              "focal_point": "top center"
+            },
+            "disabled": true,
+            "type": "collection"
+          },
+          "4ac5aac8-1557-4a29-8486-03e2cc7ed69e": {
+            "settings": {
+              "size": "square-small",
+              "collection": "",
+              "focal_point": "center center"
+            },
+            "disabled": true,
+            "type": "collection"
+          }
+        },
+        "type": "featured-collections",
+        "block_order": [
+          "1635344823cc1facef-0",
+          "1635344823cc1facef-1",
+          "1635344823cc1facef-2",
+          "1635344823cc1facef-5",
+          "1635344823cc1facef-3",
+          "1635344823cc1facef-4",
+          "4ac5aac8-1557-4a29-8486-03e2cc7ed69e"
+        ]
+      },
+      "footer": {
+        "settings": {
+          "show_payment_icons": false,
+          "show_currency_flags": false,
+          "show_locale_selector": true,
+          "copyright_text": "",
+          "show_currency_selector": false,
+          "show_copyright": true,
+          "colorize_payment_icons": false
+        },
+        "blocks": {
+          "1494292485313": {
+            "settings": {
+              "show_footer_title": true,
+              "menu": "main-menu",
+              "container_width": 20
+            },
+            "type": "menu"
+          },
+          "1494292487693": {
+            "settings": {
+              "show_footer_title": true,
+              "richtext": "<p>Subscribe to be the first to know of new products, special offers, and easy tips to living with style and sustainability. <\/p>",
+              "title": "Sign up and be an insider",
+              "container_width": 33
+            },
+            "type": "newsletter"
+          },
+          "1494292481350": {
+            "settings": {
+              "desktop_logo_height": 50,
+              "logo": "shopify:\/\/shop_images\/DALCINI_B_LINK_300.png",
+              "container_width": 27
+            },
+            "type": "logo_social"
+          },
+          "1494301487049": {
+            "settings": {
+              "show_footer_title": true,
+              "menu": "footer",
+              "container_width": 20
+            },
+            "type": "menu"
+          }
+        },
+        "type": "footer",
+        "block_order": [
+          "1494292481350",
+          "1494301487049",
+          "1494292485313",
+          "1494292487693"
+        ]
+      },
+      "162126634103446597": {
+        "settings": {
+          "blog_show_comments": false,
+          "divider": false,
+          "blog_show_tags": false,
+          "post_limit": 6,
+          "view_all": true,
+          "title": "Healthy Eating",
+          "blog": "food",
+          "blog_show_date": false,
+          "blog_show_author": false
+        },
+        "type": "blog-posts"
+      },
+      "16236605396df68fa5": {
+        "settings": {
+          "divider": false,
+          "title": "",
+          "logo_opacity": 76
+        },
+        "blocks": {
+          "16236605396df68fa5-2": {
+            "settings": {
+              "image": "shopify:\/\/shop_images\/333_fcaf3413-b3d2-4e7f-b9a5-f704e041685a.png",
+              "link": ""
+            },
+            "type": "logo_image"
+          },
+          "16236605396df68fa5-0": {
+            "settings": {
+              "image": "shopify:\/\/shop_images\/11_dd026375-16fd-495f-ab7b-31bfb7821e31.png",
+              "link": ""
+            },
+            "type": "logo_image"
+          },
+          "16236605396df68fa5-1": {
+            "settings": {
+              "image": "shopify:\/\/shop_images\/22.png",
+              "link": ""
+            },
+            "type": "logo_image"
+          }
+        },
+        "disabled": true,
+        "type": "logo-list",
+        "block_order": [
+          "16236605396df68fa5-0",
+          "16236605396df68fa5-1",
+          "16236605396df68fa5-2"
+        ]
+      },
+      "162384284108baafd4": {
+        "settings": {
+          "blog_show_comments": false,
+          "divider": false,
+          "blog_show_tags": false,
+          "post_limit": 3,
+          "view_all": true,
+          "title": "Low Tox Living",
+          "blog": "low-tox-living",
+          "blog_show_date": true,
+          "blog_show_author": false
+        },
+        "disabled": true,
+        "type": "blog-posts"
+      },
+      "page-faq-template": {
+        "settings": {
+          "page_content_enable": false,
+          "page_title_enable": true
+        },
+        "blocks": {
+          "62665555-7393-4b48-9a23-7a236a531272": {
+            "settings": {
+              "text": "<p>The containers are all manually buffed and not chemically dipped for shine.<\/p>",
+              "title": "Why are there scratches on the containers?"
+            },
+            "type": "question"
+          },
+          "7700be06-3c66-4ff8-bad5-71b8accd6227": {
+            "settings": {
+              "text": "<p>DALCINI™ Stainless products can be hand washed or put in the dishwasher top or bottom rack.<\/p>",
+              "title": "How do I wash DALCINI™ Stainless containers?"
+            },
+            "type": "question"
+          },
+          "66ef32ed-02ba-4972-906b-e0599754e796": {
+            "settings": {
+              "text": "<p>Yes, the products can go in the oven up to 450 degrees. Our stainless steel products do heat up rapidly so we recommend reducing the temperature compared to cooking with glass.<\/p>",
+              "title": "Can DALCINI™ Stainless containers go in the oven?"
+            },
+            "type": "question"
+          },
+          "649daf75-0e04-4a1f-abbd-201fbe96a255": {
+            "settings": {
+              "text": "<p>No, the DALCINI™ Stainless containers do not leave a metal taste. Metallic taste comes from aluminum or when aluminum is mixed in stainless steel. At DALCINI™ Stainless our containers are made without aluminum.<\/p>",
+              "title": "Do the containers leave a metal taste?"
+            },
+            "type": "question"
+          },
+          "523ec13e-6b99-4e79-92f7-1e9dbeac860f": {
+            "settings": {
+              "text": "<p>Refrigerator- Yes. The containers are excellent for storing all types of food, including the most fragrant or acidic foods. No more tomato stains or lingering food odors from traditional containers. Microwave- No. These are metal product and should <strong>never<\/strong> be used in a microwave. They can, however, go in an oven up to 450 degrees F. You'll likely want to reheat at about 350degrees. Unlike glass or ceramic, stainless steel heats up rapidly.<\/p>",
+              "title": "Can they go in the refrigerator? microwave?"
+            },
+            "type": "question"
+          },
+          "1d81c7fd-16da-422c-aa9d-1d9a21da6c57": {
+            "settings": {
+              "text": "<p>Yes, the containers can go in the freezer and are great for storing all types of food. For kids at school or even for work, freezing yogurt in a DALCINI™ Stainless container can work as a cold pack for the rest of your lunch and ensure your yogurt stays cold. Do not over fill.<\/p>",
+              "title": "Can the product be put in the freezer?"
+            },
+            "type": "question"
+          },
+          "2e195f8d-0c61-4b16-a6bb-36fbda574293": {
+            "settings": {
+              "text": "<p>Stainless steel is an alloy, meaning it is a mix of metals.  18\/8 is a simple classification that indicates the amount of 2 ingredients; chromium and nickel. ie 18\/8 is 18% chromium 8% nickel.  This very simplistic classification is not an indicator of quality as it does not indicate which other metals have been added. ie you can have high quality 18\/8 and a very low quality 18\/8.  Most stainless steel experts agree that knowing the series the raw material is from ie 200 or 300 series, is a indicator of how the material will hold up in its intended use.  Using this classification, we use food grade and medical grade stainless steel (201, 304 and 316).<\/p>",
+              "title": "I hear the term 18\/8 stainless steel, what does it mean? Are yours 18\/8?"
+            },
+            "type": "question"
+          },
+          "11e76462-d4a7-4e60-ad1c-a2c6576f0672": {
+            "settings": {
+              "text": "<p>No, it is lighter than glass but heavier than plastic.<\/p>",
+              "title": "Is this product heavy?"
+            },
+            "type": "question"
+          },
+          "9a54dc2f-4099-4492-bab6-b6370072b302": {
+            "settings": {
+              "text": "<p>DALCINI™ Stainless products are ethically made in India with the skilled craftsmanship that has been used for over 200 years. No child-labor has been used in making our products.<\/p>",
+              "title": "Where are your products made?"
+            },
+            "type": "question"
+          },
+          "page-faq-template-1": {
+            "settings": {
+              "text": "<p>No. While both are alloys known for their strength, stainless steel is considerably more expensive because of its many added benefits. Stainless steel was discovered more than 200 years ago and is most revered for its non-corroding, non-staining, non-porous, antibacterial properties. There are different grades of stainless steel, for use in different applications. At DALCINI™, we use 201,304 and 316 grades. It is the type most commonly used in commercial kitchens and hospitals around the world.<\/p>",
+              "title": "Is ‘stainless steel’ the same as ‘steel’?"
+            },
+            "type": "question"
+          },
+          "28f69f4c-645c-4899-b89b-42a32b68f273": {
+            "settings": {
+              "text": "<p>No, the DALCINI™ Stainless containers will not tarnish with acidic foods. You don't have to worry about stains or lingering food smells either! Smaller containers such as the Little Snacker can be used to hold a hand wash towel soaked in lemon, Great for cleaning up before you eat.<\/p>",
+              "title": "Will the product tarnish with acidic foods?"
+            },
+            "type": "question"
+          },
+          "page-faq-template-4": {
+            "settings": {
+              "text": "<p>Yes.  All of our products are dishwasher safe. There are many reasons why some stainless steel products are hand wash only, or \"not recommended\" for the dishwasher.  It may be to protect the exterior paint finish, to protect the chemical resins that leach when heated, or it may be because of the interior seam that weakens with heat.  It could be because of the non-dishwasher safe parts such as the clasps, lids, seals, straws.  We wanted safe, but we also wanted simple, so go ahead and drop them in the dishwasher!<\/p>",
+              "title": "Are DALCINI™ Stainless containers dishwasher safe? I have other stainless steel products and they are \"hand wash only\"."
+            },
+            "type": "question"
+          },
+          "9af17926-5185-4092-b3b5-8f2e40f9450d": {
+            "settings": {
+              "text": "<p>Yes, these products are suitable for all ages. Made easy to open for kids at school, but still with a tight seal. They are great for school, work or even for leftovers to store in the fridge or freezer. These products are not made for liquids like soup. Ideal for dry contents and should be stored upright if thicker liquids are inside, ie yogurt.<\/p>",
+              "title": "Is this product suitable for kids?"
+            },
+            "type": "question"
+          },
+          "page-faq-template-2": {
+            "settings": {
+              "text": "<p>When there are seams, there are chemical adhesives used to join them. There is also an epoxy resin coating applied to protect food contents from coming in contact with it. Those chemicals often include lead, Bisphenol A and other chemicals toxic to human health and the environment. A seamless interior eliminates the introduction of toxic chemicals, and also eliminates the ridged surface where food bacteria loves to hide.<\/p>",
+              "title": "What is the benefit of having 'seamless' containers?"
+            },
+            "type": "question"
+          },
+          "621981af-5173-4610-baf9-c1f4ebbfa2dd": {
+            "settings": {
+              "text": "<p>Yes, many families managing allergies are concerned about cross contamination between foods. With DALCINI™ Stainless there is no risk of absorption of foods, so once the containers are washed they are sanitized.<\/p>",
+              "title": "Are the DALCINI™ Stainless containers containers good for families concerned with allergies?"
+            },
+            "type": "question"
+          },
+          "c9cb3ebc-6ecf-4592-aaa9-0cdad62d6539": {
+            "settings": {
+              "text": "<p>The DALCINI™ Stainless containers are infinitely recyclable unlike plastic, glass which have 5-7 recycles. The stainless steal is melted down, formed into sheets and is reformed into new products.<\/p>",
+              "title": "DALCINI™ Stainless containers sustainability profile."
+            },
+            "type": "question"
+          },
+          "36dcd43f-898a-4f35-960f-3af32ec8ad65": {
+            "settings": {
+              "text": "<p>Any washable marker will work on the containers. The DALCINI™ Stainless containers are able to be written on as they have no coating and are non porous, which means they do not absorb. Markers that have been used and worked well are Crayola and EXPOS.<\/p>",
+              "title": "What markers can I use on the containers?"
+            },
+            "type": "question"
+          },
+          "b8565b83-de3a-41ac-ae1b-b3ebd88a9a8f": {
+            "settings": {
+              "text": "<p>There are many metal products on the market but what makes DALCINI™ Stainless products special is the purity. DALCINI™ Stainless is Non-leaching, Dishwasher-safe, Freezer-safe, Oven-safe, Space-saving, Child-safe, Ethically-made in India, No Hormone-disruptors, No Lead, No Aluminum, Sustainable, and Lifetime Warranty (against rust and odors).<\/p>",
+              "title": "How are the DALCINI™ Stainless containers different?"
+            },
+            "type": "question"
+          },
+          "0959eae8-9e9b-4eaa-b15d-2153b56280a8": {
+            "settings": {
+              "text": "<p>The containers have a tight seal, however, they are not designed for liquids such as soup. They are ideal for dry contents such as cheese, crackers, fruit etc. When using thicker contents such as yogurt, we recommend using lunch bags that hold the contents upright to minimize any risk of a leak.<\/p>",
+              "title": "Are the containers leakproof?"
+            },
+            "type": "question"
+          },
+          "99d2a10b-973c-4b64-a367-64914bfd3049": {
+            "settings": {
+              "text": "<p>Every DALCINI™ Stainless container is hand crafted in India and every container has its slight imperfections. These imperfections should not affect the products usage. Our containers are not chemically dipped for shine, and each container is hand made and hand crafted.<\/p>",
+              "title": "Why does my DALCINI™ Stainless container have slight imperfections?"
+            },
+            "type": "question"
+          }
+        },
+        "type": "page-faq-template",
+        "block_order": [
+          "page-faq-template-1",
+          "page-faq-template-2",
+          "page-faq-template-4",
+          "523ec13e-6b99-4e79-92f7-1e9dbeac860f",
+          "0959eae8-9e9b-4eaa-b15d-2153b56280a8",
+          "9a54dc2f-4099-4492-bab6-b6370072b302",
+          "2e195f8d-0c61-4b16-a6bb-36fbda574293",
+          "7700be06-3c66-4ff8-bad5-71b8accd6227",
+          "66ef32ed-02ba-4972-906b-e0599754e796",
+          "9af17926-5185-4092-b3b5-8f2e40f9450d",
+          "28f69f4c-645c-4899-b89b-42a32b68f273",
+          "1d81c7fd-16da-422c-aa9d-1d9a21da6c57",
+          "99d2a10b-973c-4b64-a367-64914bfd3049",
+          "c9cb3ebc-6ecf-4592-aaa9-0cdad62d6539",
+          "11e76462-d4a7-4e60-ad1c-a2c6576f0672",
+          "36dcd43f-898a-4f35-960f-3af32ec8ad65",
+          "62665555-7393-4b48-9a23-7a236a531272",
+          "621981af-5173-4610-baf9-c1f4ebbfa2dd",
+          "649daf75-0e04-4a1f-abbd-201fbe96a255",
+          "b8565b83-de3a-41ac-ae1b-b3ebd88a9a8f"
+        ]
+      },
+      "article-template": {
+        "settings": {
+          "blog_show_comments": true,
+          "blog_show_tags": true,
+          "blog_show_date": true,
+          "social_sharing_blog": true,
+          "blog_show_author": false
+        },
+        "type": "article-template"
+      },
+      "162366143491d9be41": {
+        "settings": {
+          "home_featured_products": "best-sellers",
+          "divider": false,
+          "view_all": true,
+          "title": "Best Sellers",
+          "rows": 5,
+          "per_row": 5
+        },
+        "type": "featured-collection"
+      },
+      "product-template": {
+        "settings": {
+          "social_enable": true,
+          "enable_video_looping": true,
+          "thumbnail_arrows": false,
+          "image_size": "medium",
+          "thumbnail_position": "beside",
+          "description_style": "default",
+          "product_video_style": "muted"
+        },
+        "type": "product-template"
+      },
+      "162126658263265ce6": {
+        "settings": {
+          "blog_show_comments": false,
+          "divider": false,
+          "blog_show_tags": false,
+          "post_limit": 3,
+          "view_all": true,
+          "title": "Understanding Toxicants",
+          "blog": "low-tox-living",
+          "blog_show_date": true,
+          "blog_show_author": false
+        },
+        "disabled": true,
+        "type": "blog-posts"
+      },
+      "blog-template": {
+        "settings": {
+          "blog_show_tag_filter": true,
+          "blog_show_comments": true,
+          "blog_show_rss": false,
+          "blog_show_tags": true,
+          "blog_show_date": true,
+          "blog_show_author": false
+        },
+        "type": "blog-template"
+      },
+      "1623844341eb7c7f14": {
+        "settings": {
+          "parallax": false,
+          "autoplay_speed": 5,
+          "style": "arrows",
+          "section_height": "750px",
+          "mobile_height": "auto",
+          "autoplay": false
+        },
+        "blocks": {
+          "1623844341c27d9b7e-0": {
+            "settings": {
+              "image": "shopify:\/\/shop_images\/DalciniStainless_Lifestyle_10.12.201638470_72b156f4-82e7-43df-b6ae-0d17769e0b5e.jpg",
+              "title_size": 40,
+              "overlay_opacity": 0,
+              "link": "shopify:\/\/collections\/food-storage",
+              "title": "zero plastic\nzero toxicants\n& infinitely recyclable",
+              "image_mobile": "shopify:\/\/shop_images\/DalciniStainless_Lifestyle_10.12.201638470_72b156f4-82e7-43df-b6ae-0d17769e0b5e.jpg",
+              "subheading": "Sustainable food storage solutions",
+              "link_text": "SHOP NOW",
+              "focal_point": "center center",
+              "text_align": "vertical-center horizontal-right"
+            },
+            "type": "image"
+          }
+        },
+        "type": "slideshow",
+        "block_order": [
+          "1623844341c27d9b7e-0"
+        ]
+      },
+      "1498163293234": {
+        "settings": {
+          "align_text": "left",
+          "narrow_column": false,
+          "divider": false,
+          "link": "",
+          "text": "<p><strong>Food packaging and food storage containers are the leading category of waste in landfills. <\/strong><\/p><p><strong>Food storage that leaches or shed microplastics is the primary route of entry into our bodies.  We are eating and drinking hormone-disrupting chemicals unknowingly with the contents stored in them!<\/strong> <\/p><p> <\/p><p><em>BPA leaches from plastic <\/em><a href=\"https:\/\/www.scientificamerican.com\/article\/plastic-not-fantastic-with-bisphenol-a\/\" title=\"BPA leaches 55 times faster in heat\"><em><strong>55 times faster in heat <\/strong><\/em><\/a><em>. When food is in them, or even when used post heat, the leached chemicals transfers to the food stored in them. We think it's time for containers to be safe in sunlight and dishwashers without the worry of leaching chemicals! <\/em><\/p><p><em>91% of plastic is not recycled.<\/em><\/p><p><em>Plastic takes up to 1000 years to decompose. <\/em><\/p><p><em>Every bit of plastic ever created still exists in our world today.<\/em><\/p><p><\/p><p><strong>That's why we've made it our mission to create food storage that is safe, simple, and sustainable . <\/strong><\/p>",
+          "title": "Why are we committed to changing food storage:",
+          "link_text": "",
+          "enlarge_text": false
+        },
+        "type": "featured-content"
+      },
+      "1499790731541": {
+        "settings": {
+          "layout": "left",
+          "cta_link2": "shopify:\/\/collections\/shop",
+          "cta_link1": "shopify:\/\/collections\/food-storage",
+          "divider": false,
+          "subtitle": "lifetime warranty",
+          "collection": "shop",
+          "text": "Dalcini Stainless kitchenware are beautiful, practical and they're built to last!  And at end of life, our 'all stainless design' (no plastic lids, paint, dyes, resins or other mixed materials), the products can be heated at very high temperatures to create stainless steel sheets which are then used to create new stainless steel goods,  This cycle can be repeated infinitely- a circular economy!",
+          "title": "A circular economy",
+          "cta_text2": "Shop All",
+          "cta_text1": "Shop Kitchenware"
+        },
+        "type": "collection-callout"
+      },
+      "1498501481980": {
+        "settings": {
+          "title_font": "body",
+          "slide_speed": 5,
+          "title_size": 45,
+          "color_overlay_opacity": 30,
+          "title_color": "#ffffff",
+          "color_overlay": "#000000",
+          "link": "",
+          "desktop_height": "650px",
+          "title_lines": "2",
+          "title_bg_color": "rgba(0,0,0,0)",
+          "mobile_height": "auto",
+          "text_align": "vertical-center horizontal-center"
+        },
+        "blocks": {
+          "1498501481980-0": {
+            "settings": {
+              "image": "shopify:\/\/shop_images\/DalciniStainless_Lifestyle_10.12.201638519.jpg",
+              "slide_title2": "to use, clean and store",
+              "focal_point": "center center",
+              "slide_title1": "SIMPLE"
+            },
+            "type": "image"
+          },
+          "1498501481980-2": {
+            "settings": {
+              "image": "shopify:\/\/shop_images\/DalciniStainless_Lifestyle_10.12.201638470_72b156f4-82e7-43df-b6ae-0d17769e0b5e.jpg",
+              "slide_title2": "Toxicant-free. Infinitely recyclable.",
+              "focal_point": "center center",
+              "slide_title1": "SUSTAINABLE"
+            },
+            "type": "image"
+          },
+          "1498501481980-1": {
+            "settings": {
+              "image": "shopify:\/\/shop_images\/Dalcini_Lifestyle_3.22.201928516.jpg",
+              "slide_title2": "US FDA compliant food-grade stainless steel",
+              "focal_point": "center center",
+              "slide_title1": "SAFE"
+            },
+            "type": "image"
+          }
+        },
+        "disabled": true,
+        "type": "fading-images",
+        "block_order": [
+          "1498501481980-1",
+          "1498501481980-0",
+          "1498501481980-2"
+        ]
+      },
+      "1623844991eb83ad2f": {
+        "settings": {
+          "round_images": true,
+          "color_background": "#f9f9f9",
+          "color_text": "#1c1d1d",
+          "title": "Don't take our word for it"
+        },
+        "blocks": {
+          "1623844991eb83ad2f-1": {
+            "settings": {
+              "testimonial": "<p>Stainless steel food containers should be the norm<\/p><p>Light to carry, easy to use, store and clean.Without any hesitation, I recommend them.<\/p>",
+              "author": "Delphine D.",
+              "icon": "5-stars",
+              "author_info": ""
+            },
+            "disabled": true,
+            "type": "testimonial"
+          },
+          "1623844991eb83ad2f-2": {
+            "settings": {
+              "testimonial": "<p>Its quality is amazing, the size fits my needs, their service is really good!<\/p>",
+              "author": "Rong X.",
+              "icon": "5-stars",
+              "author_info": ""
+            },
+            "disabled": true,
+            "type": "testimonial"
+          },
+          "1623844991eb83ad2f-0": {
+            "settings": {
+              "testimonial": "<p>The Dalcini lunch box container and the little snackers are the perfect size, so easy to clean and (bonus!) dishwasher safe.<\/p>",
+              "author": "Nathalie H.",
+              "icon": "5-stars",
+              "author_info": ""
+            },
+            "disabled": true,
+            "type": "testimonial"
+          },
+          "b54e198b-c0b0-4ada-9977-6ebb1661d09d": {
+            "settings": {
+              "testimonial": "<p>The Dalcini lunch box container and the little snackers are the perfect size, so easy to clean and (bonus!) dishwasher safe.<\/p>",
+              "author": "Nathalie H.",
+              "icon": "5-stars",
+              "author_info": ""
+            },
+            "disabled": true,
+            "type": "testimonial"
+          }
+        },
+        "disabled": true,
+        "type": "testimonials",
+        "block_order": [
+          "1623844991eb83ad2f-0",
+          "1623844991eb83ad2f-1",
+          "1623844991eb83ad2f-2",
+          "b54e198b-c0b0-4ada-9977-6ebb1661d09d"
+        ]
+      },
+      "1635343453a64ae3bc": {
+        "settings": {
+          "maxwidth": 1920
+        },
+        "type": "judgeme_carousel_section"
+      },
+      "collection-template": {
+        "settings": {
+          "collection_subnav_style": "inline",
+          "mobile_flush_grid": false,
+          "collection_image_height": 550,
+          "collection_image_enable": true,
+          "parallax": true,
+          "collection_sort_enable": false,
+          "collection_tags_style": "none",
+          "description_position": "top",
+          "per_row": 4
+        },
+        "type": "collection-template"
+      },
+      "footer-promotions": {
+        "settings": {
+          "align_text": "left",
+          "image_size": "wide",
+          "hide_homepage": false
+        },
+        "type": "footer-promotions"
+      },
+      "1499790633921": {
+        "settings": {
+          "layout": "left",
+          "parallax": true,
+          "subtitle": "Impressive",
+          "button_link": "",
+          "text": "<p>Pair large text with a full-width image to draw attention to an important detail of your brand or product line.<\/p>",
+          "button_label": "",
+          "title": "Large image and text",
+          "focal_point": "center",
+          "height": 650
+        },
+        "disabled": true,
+        "type": "background-image-text"
+      },
+      "newsletter-popup": {
+        "settings": {
+          "mode": "disabled",
+          "popup_days": 30,
+          "popup_seconds": 5,
+          "popup_text": "<p>Entice customers to sign up for your mailing list with discounts or exclusive offers. Include an image for extra impact.<\/p>",
+          "enable_newsletter": true,
+          "button_link": "",
+          "close_text": "No thanks",
+          "button_label": "Optional button",
+          "enable_button": false,
+          "popup_title": "Sign up and save"
+        },
+        "type": "newsletter-popup"
+      },
+      "1623844690cb2eb39a": {
+        "settings": {
+          "layout": "left",
+          "image": "shopify:\/\/shop_images\/DalciniStainless_Lifestyle_10.12.201638470_72b156f4-82e7-43df-b6ae-0d17769e0b5e.jpg",
+          "divider": false,
+          "subtitle": "",
+          "button_link": "shopify:\/\/pages\/about",
+          "image_width": 500,
+          "text": "<p>Our kitchens are being overrun by plastic waste and the chemicals that leach from the plastic. It is harming our health and the health of our planet. So we set out to do something about it. <\/p><p>DALCINI™ Stainless is an award winning company dedicated to creating beautiful, toxicant free, sustainable kitchenware to tackle the chemicals, the clutter in our homes and the crisis facing our planet. Our sleek seamless designs are easy-to-use, easy-to-clean, and easy-to-store, and easy-on-the-environment. <\/p><p>Handcrafted in India by skilled artisans at ethical manufacturing facility. <\/p><p> <\/p><p><\/p>",
+          "button_label": "Learn More",
+          "title": "Our Story"
+        },
+        "type": "text-and-image"
+      },
+      "header": {
+        "settings": {
+          "type_navigation_size": 17,
+          "type_navigation_style": false,
+          "main_menu_link_list": "main-menu",
+          "header_style": "sticky",
+          "sticky_index": true,
+          "announcement_link": "",
+          "main_menu_alignment": "left-center",
+          "announcement_closable": false,
+          "sticky_collection": false,
+          "show_announcement": true,
+          "announcement_text": "FREE SHIPPING over $50 (before tax)"
+        },
+        "blocks": {
+          "b1f72139-7c3d-4cd4-a2f3-5bf911aec688": {
+            "settings": {
+              "desktop_logo_width": 200,
+              "logo": "shopify:\/\/shop_images\/DALCINI-B.png",
+              "mobile_logo_width": 140,
+              "logo-inverted": "shopify:\/\/shop_images\/DALCINI-B.png"
+            },
+            "type": "logo"
+          }
+        },
+        "type": "header",
+        "block_order": [
+          "b1f72139-7c3d-4cd4-a2f3-5bf911aec688"
+        ]
+      },
+      "1566999869051": {
+        "settings": {
+          "collection1": "lunch-containers",
+          "collection2": "food-storage",
+          "divider": false,
+          "view_all": true,
+          "title": "Most popular",
+          "per_row": 5
+        },
+        "disabled": true,
+        "type": "featured-collection-switcher"
+      },
+      "product-collection-links": {
+        "settings": {
+          "collection_links_enable": true
+        },
+        "type": "product-collection-links"
+      },
+      "product-recommendations": {
+        "settings": {
+          "related_count": 5,
+          "show_product_recommendations": true,
+          "product_recommendations_heading": "You may also like"
+        },
+        "type": "product-recommendations"
+      }
+    },
+    "enable_product_reviews": false,
+    "mlvedaACS_positionRight": "10px",
+    "content_for_index": [
+      "1623844341eb7c7f14",
+      "1499790529450",
+      "16236605396df68fa5",
+      "1635343453a64ae3bc",
+      "162366143491d9be41",
+      "1635344823cc1facef",
+      "1623844991eb83ad2f",
+      "1623844690cb2eb39a",
+      "1566999869051",
+      "1499790731541",
+      "1498163293234",
+      "1498501481980",
+      "1499790633921",
+      "162126634103446597",
+      "162126658263265ce6",
+      "162384284108baafd4"
+    ],
+    "type_base_size": 16,
+    "icon_linecaps": "round",
+    "checkout_logo_position": "left",
+    "color_drawer_text": "#000000",
+    "checkout_logo_image": "shopify:\/\/shop_images\/Screen_Shot_2022-07-11_at_8.02.06_PM.png",
+    "type_header_spacing": "50",
+    "checkout_use_header_image": false,
+    "checkout_sidebar_background_color": "#fafafa",
+    "mlvedaACS_defaultCurrency": "USD",
+    "mlvedaACS_positionLeft": "10px",
+    "animate_images_style": "fade-in",
+    "color_drawer_background": "#ffffff",
+    "type_base_font_family": "neuzeit_office_n4",
+    "animate_sections": false,
+    "mlvedaACS_positionBottom": "10px",
+    "checkout_banner_background_color": "#ffffff",
+    "mlvedaACS_messageBackgroundColor": "inherit",
+    "product_description_collapse": true,
+    "checkout_error_color": "#ff6d6d",
+    "color_drawer_button_text": "#ffffff",
+    "mlvedaACS_roundDecimalValue": 1,
+    "color_drawer_button": "#111111",
+    "mlvedaACS_backgroundColor": "inherit",
+    "mlvedaACS_position": "hide",
+    "mlvedaMCP_isSaveAmount": true,
+    "animate_page_transition_style": "page-slide-reveal-down",
+    "product_color_swatches": true,
+    "surface_pickup_enable": true,
+    "type_header_font_family": "sans-serif",
+    "mlvedaACS_textHoverColor": "inherit",
+    "favicon": "shopify:\/\/shop_images\/DALCINI_S_B_L_SQUARE_300.jpg",
+    "mlvedaACS_enable": true,
+    "type_base_spacing": "25",
+    "mlvedaACS_supportedCurrencies": "CAD USD AUD",
+    "share_pinterest": true,
+    "mlvedaACS_hideDecimal": false,
+    "mlvedaACS_hoverBackgroundColor": "inherit",
+    "breadcrumb": true,
+    "show_multiple_currencies": true,
+    "mlvedaACS_currencyFormat": "money_with_currency_format",
+    "mlvedaACS_borderLineColor": "inherit",
+    "mlvedaMCP_saleClass": ".",
+    "mlvedaACS_displayFlag": false,
+    "color_borders": "#f0f1f3",
+    "product_contact": false,
+    "variant_labels_enable": false,
+    "mlvedaMCP_isTextWithPrice": false
+  },
+  "presets": {
+    "Elegant": {
+      "checkout_body_font": "Helvetica Neue",
+      "type_header_base_size": 42,
+      "color_input": "#ffffff",
+      "color_image_bg": "#000000",
+      "color_large_image_bg": "#17172c",
+      "checkout_call_to_action_color": "#a26b25",
+      "animate_buttons": true,
+      "color_button": "#353956",
+      "animate_underlines": true,
+      "checkout_header_image": "",
+      "color_image_2_opacity": 0,
+      "checkout_body_background_color": "#ffffff",
+      "checkout_sidebar_background_image": "",
+      "color_modal_overlays": "#17172c",
+      "icon_weight": "3px",
+      "animate_images": true,
+      "color_footer_text": "#ffffff",
+      "quick_shop_text": "Quick view",
+      "share_facebook": true,
+      "checkout_accent_color": "#111111",
+      "color_button_text": "#ffffff",
+      "sections": {
+        "1499789718857": {
+          "settings": {
+            "divider": false,
+            "title": ""
+          },
+          "blocks": {
+            "1499789718857-1": {
+              "settings": {
+                "size": "square-small",
+                "collection": ""
+              },
+              "type": "collection"
+            },
+            "1499789718857-0": {
+              "settings": {
+                "size": "wide",
+                "collection": ""
+              },
+              "type": "collection"
+            },
+            "1499789718857-3": {
+              "settings": {
+                "size": "square-small",
+                "collection": ""
+              },
+              "type": "collection"
+            },
+            "1499789718857-2": {
+              "settings": {
+                "size": "square-small",
+                "collection": ""
+              },
+              "type": "collection"
+            },
+            "1499789718857-5": {
+              "settings": {
+                "size": "wide",
+                "collection": ""
+              },
+              "type": "collection"
+            },
+            "1499789718857-4": {
+              "settings": {
+                "size": "square-small",
+                "collection": ""
+              },
+              "type": "collection"
+            }
+          },
+          "type": "featured-collections",
+          "block_order": [
+            "1499789718857-0",
+            "1499789718857-1",
+            "1499789718857-2",
+            "1499789718857-3",
+            "1499789718857-4",
+            "1499789718857-5"
+          ]
+        },
+        "1499790529450": {
+          "settings": {
+            "video_url": "https:\/\/www.youtube.com\/watch?v=_9VUPq3SxOc",
+            "title_size": 80,
+            "link": "https:\/\/www.youtube.com\/watch?v=_9VUPq3SxOc",
+            "title": "Bring your\nbrand to life.",
+            "subheading": "",
+            "link_text": "Watch",
+            "section_height": "650px"
+          },
+          "type": "hero-video"
+        },
+        "footer": {
+          "settings": {},
+          "blocks": {
+            "1494292485313": {
+              "settings": {
+                "menu": "main-menu",
+                "container_width": 20
+              },
+              "type": "menu"
+            },
+            "1494292487693": {
+              "settings": {
+                "container_width": 33
+              },
+              "type": "newsletter"
+            },
+            "1494292481350": {
+              "settings": {
+                "container_width": 20
+              },
+              "type": "logo_social"
+            },
+            "1494301487049": {
+              "settings": {
+                "menu": "footer",
+                "container_width": 20
+              },
+              "type": "menu"
+            }
+          },
+          "type": "footer",
+          "block_order": [
+            "1494292481350",
+            "1494301487049",
+            "1494292485313",
+            "1494292487693"
+          ]
+        },
+        "collection-template": {
+          "settings": {
+            "collection_image_enable": true,
+            "collection_sort_enable": false,
+            "per_row": 4
+          },
+          "type": "collection-template"
+        },
+        "article-template": {
+          "settings": {
+            "blog_show_comments": true,
+            "blog_show_tags": true,
+            "blog_show_date": true,
+            "social_sharing_blog": true,
+            "blog_show_author": false
+          },
+          "type": "article-template"
+        },
+        "product-template": {
+          "settings": {
+            "social_enable": true,
+            "image_size": "medium"
+          },
+          "type": "product-template"
+        },
+        "1499790633921": {
+          "settings": {
+            "layout": "left",
+            "image": "",
+            "subtitle": "Impressive",
+            "button_link": "",
+            "text": "<p>Pair large text with a full-width image to draw attention to an important detail of your brand or product line.<\/p>",
+            "button_label": "",
+            "title": "Large image and text",
+            "height": 650
+          },
+          "type": "background-image-text"
+        },
+        "blog-template": {
+          "settings": {
+            "blog_show_tag_filter": true,
+            "blog_show_comments": true,
+            "blog_show_rss": false,
+            "blog_show_tags": true,
+            "blog_show_date": true,
+            "blog_show_author": false
+          },
+          "type": "blog-template"
+        },
+        "header": {
+          "settings": {
+            "main_menu_link_list": "main-menu",
+            "sticky_index": true,
+            "sticky_collection": false,
+            "show_announcement": true
+          },
+          "type": "header"
+        },
+        "1498163293234": {
+          "settings": {},
+          "type": "featured-content"
+        },
+        "1566999869051": {
+          "settings": {},
+          "type": "featured-collection-switcher"
+        },
+        "1499790731541": {
+          "settings": {
+            "cta_link2": "",
+            "cta_link1": "",
+            "divider": false,
+            "subtitle": "Brand new",
+            "collection": "",
+            "text": "Use this section to easily call attention to one of your collections. We'll show photos of the first 5 products.",
+            "title": "Collection callout",
+            "cta_text2": "Shop All",
+            "cta_text1": "Shop Jackets"
+          },
+          "type": "collection-callout"
+        },
+        "1498501481980": {
+          "settings": {
+            "slide_speed": 5,
+            "color_overlay_opacity": 30,
+            "color_overlay": "#000000"
+          },
+          "blocks": {
+            "1498501481980-0": {
+              "settings": {
+                "image": "",
+                "slide_title2": "titles and images",
+                "focal_point": "center center",
+                "slide_title1": "Beautifully animated"
+              },
+              "type": "image"
+            },
+            "1498501481980-2": {
+              "settings": {
+                "image": "",
+                "slide_title2": "important details",
+                "focal_point": "center center",
+                "slide_title1": "And highlight"
+              },
+              "type": "image"
+            },
+            "1498501481980-1": {
+              "settings": {
+                "image": "",
+                "slide_title2": "to impress",
+                "focal_point": "center center",
+                "slide_title1": "Use this section"
+              },
+              "type": "image"
+            }
+          },
+          "type": "fading-images",
+          "block_order": [
+            "1498501481980-0",
+            "1498501481980-1",
+            "1498501481980-2"
+          ]
+        }
+      },
+      "content_for_index": [
+        "1499790529450",
+        "1566999869051",
+        "1498163293234",
+        "1499789718857",
+        "1498501481980",
+        "1499790731541",
+        "1499790633921"
+      ],
+      "color_drawer_border": "#e8e8e1",
+      "type_base_size": 17,
+      "icon_linecaps": "miter",
+      "checkout_logo_position": "left",
+      "checkout_logo_size": "medium",
+      "color_drawer_text": "#17172c",
+      "checkout_button_color": "#111111",
+      "checkout_logo_image": "",
+      "type_header_spacing": "0",
+      "checkout_use_header_image": false,
+      "share_twitter": true,
+      "checkout_sidebar_background_color": "#fafafa",
+      "cart_type": "drawer",
+      "checkout_input_background_color_mode": "white",
+      "animate_images_style": "zoom-fade",
+      "color_drawer_background": "#ffffff",
+      "type_base_font_family": "futura_n4",
+      "animate_sections": true,
+      "animate_page_transitions": true,
+      "checkout_banner_background_color": "#ffffff",
+      "checkout_error_color": "#ff6d6d",
+      "color_drawer_button_text": "#ffffff",
+      "color_small_image_bg": "#f4f4f4",
+      "color_image_1_opacity": 32,
+      "color_drawer_button": "#353956",
+      "animate_sections_background_style": "zoom-fade",
+      "animate_sections_text_style": "rise-up",
+      "animate_page_transition_style": "page-slow-fade",
+      "checkout_heading_font": "Helvetica Neue",
+      "type_header_font_family": "bauer_bodoni_n7",
+      "type_base_line_height": 1.6,
+      "type_base_spacing": "25",
+      "share_pinterest": true,
+      "checkout_body_background_image": "",
+      "color_footer": "#17172c",
+      "breadcrumb": true,
+      "color_image_1": "#17172c",
+      "color_image_2": "#17172c",
+      "color_borders": "#e8e8e1",
+      "type_header_line_height": 1.3
+    },
+    "Classic": {
+      "checkout_body_font": "Helvetica Neue",
+      "type_header_base_size": 35,
+      "color_input": "#ffffff",
+      "color_image_bg": "#000000",
+      "color_large_image_bg": "#111111",
+      "checkout_call_to_action_color": "#a26b25",
+      "animate_buttons": true,
+      "color_button": "#111111",
+      "animate_underlines": true,
+      "checkout_header_image": "",
+      "color_image_2_opacity": 0,
+      "checkout_body_background_color": "#ffffff",
+      "checkout_sidebar_background_image": "",
+      "type_base_accent_transform": true,
+      "icon_weight": "3px",
+      "animate_images": true,
+      "color_footer_text": "#ffffff",
+      "quick_shop_text": "Quick view",
+      "share_facebook": true,
+      "checkout_accent_color": "#111111",
+      "color_button_text": "#ffffff",
+      "sections": {
+        "1499789718857": {
+          "settings": {
+            "divider": false,
+            "title": ""
+          },
+          "blocks": {
+            "1499789718857-1": {
+              "settings": {
+                "size": "square-small",
+                "collection": ""
+              },
+              "type": "collection"
+            },
+            "1499789718857-0": {
+              "settings": {
+                "size": "wide",
+                "collection": ""
+              },
+              "type": "collection"
+            },
+            "1499789718857-3": {
+              "settings": {
+                "size": "square-small",
+                "collection": ""
+              },
+              "type": "collection"
+            },
+            "1499789718857-2": {
+              "settings": {
+                "size": "square-small",
+                "collection": ""
+              },
+              "type": "collection"
+            },
+            "1499789718857-5": {
+              "settings": {
+                "size": "wide",
+                "collection": ""
+              },
+              "type": "collection"
+            },
+            "1499789718857-4": {
+              "settings": {
+                "size": "square-small",
+                "collection": ""
+              },
+              "type": "collection"
+            }
+          },
+          "type": "featured-collections",
+          "block_order": [
+            "1499789718857-0",
+            "1499789718857-1",
+            "1499789718857-2",
+            "1499789718857-3",
+            "1499789718857-4",
+            "1499789718857-5"
+          ]
+        },
+        "1499790529450": {
+          "settings": {
+            "video_url": "https:\/\/www.youtube.com\/watch?v=_9VUPq3SxOc",
+            "title_size": 80,
+            "link": "https:\/\/www.youtube.com\/watch?v=_9VUPq3SxOc",
+            "title": "Bring your\nbrand to life.",
+            "subheading": "",
+            "link_text": "Watch",
+            "section_height": "650px"
+          },
+          "type": "hero-video"
+        },
+        "footer": {
+          "settings": {},
+          "blocks": {
+            "1494292485313": {
+              "settings": {
+                "menu": "main-menu",
+                "container_width": 20
+              },
+              "type": "menu"
+            },
+            "1494292487693": {
+              "settings": {
+                "container_width": 33
+              },
+              "type": "newsletter"
+            },
+            "1494292481350": {
+              "settings": {
+                "container_width": 20
+              },
+              "type": "logo_social"
+            },
+            "1494301487049": {
+              "settings": {
+                "menu": "footer",
+                "container_width": 20
+              },
+              "type": "menu"
+            }
+          },
+          "type": "footer",
+          "block_order": [
+            "1494301487049",
+            "1494292485313",
+            "1494292487693",
+            "1494292481350"
+          ]
+        },
+        "collection-template": {
+          "settings": {
+            "collection_image_enable": true,
+            "collection_sort_enable": false,
+            "per_row": 4
+          },
+          "type": "collection-template"
+        },
+        "article-template": {
+          "settings": {
+            "blog_show_comments": true,
+            "blog_show_tags": true,
+            "blog_show_date": true,
+            "social_sharing_blog": true,
+            "blog_show_author": false
+          },
+          "type": "article-template"
+        },
+        "product-template": {
+          "settings": {
+            "social_enable": true,
+            "image_size": "medium"
+          },
+          "type": "product-template"
+        },
+        "1499790633921": {
+          "settings": {
+            "layout": "left",
+            "image": "",
+            "subtitle": "Impressive",
+            "button_link": "",
+            "text": "<p>Pair large text with a full-width image to draw attention to an important detail of your brand or product line.<\/p>",
+            "button_label": "",
+            "title": "Large image and text",
+            "height": 650
+          },
+          "type": "background-image-text"
+        },
+        "page-sections-template": {
+          "settings": {},
+          "blocks": {
+            "page-rich-text": {
+              "settings": {
+                "title": "",
+                "enlarge_text": true
+              },
+              "type": "rich-text"
+            },
+            "page-fading-images": {
+              "settings": {},
+              "type": "fading-images"
+            },
+            "page-text-columns": {
+              "settings": {},
+              "type": "text-columns"
+            },
+            "page-background-image-text": {
+              "settings": {
+                "layout": "right"
+              },
+              "type": "background-image-text"
+            },
+            "page-featured-collection": {
+              "settings": {},
+              "type": "featured-collection"
+            }
+          },
+          "type": "page-sections-template",
+          "block_order": [
+            "page-fading-images",
+            "page-rich-text",
+            "page-text-columns",
+            "page-background-image-text",
+            "page-featured-collection"
+          ]
+        },
+        "blog-template": {
+          "settings": {
+            "blog_show_tag_filter": true,
+            "blog_show_comments": true,
+            "blog_show_rss": false,
+            "blog_show_tags": true,
+            "blog_show_date": true,
+            "blog_show_author": false
+          },
+          "type": "blog-template"
+        },
+        "header": {
+          "settings": {
+            "main_menu_link_list": "main-menu",
+            "sticky_index": true,
+            "sticky_collection": false,
+            "show_announcement": true
+          },
+          "type": "header"
+        },
+        "1498163293234": {
+          "settings": {},
+          "type": "featured-content"
+        },
+        "1566999869051": {
+          "settings": {},
+          "type": "featured-collection-switcher"
+        },
+        "1499790731541": {
+          "settings": {
+            "cta_link2": "",
+            "cta_link1": "",
+            "divider": false,
+            "subtitle": "Brand new",
+            "collection": "",
+            "text": "Use this section to easily call attention to one of your collections. We'll show photos of the first 5 products.",
+            "title": "Collection callout",
+            "cta_text2": "Shop All",
+            "cta_text1": "Shop Jackets"
+          },
+          "type": "collection-callout"
+        },
+        "1498501481980": {
+          "settings": {
+            "slide_speed": 5,
+            "color_overlay_opacity": 30,
+            "color_overlay": "#000000"
+          },
+          "blocks": {
+            "1498501481980-0": {
+              "settings": {
+                "image": "",
+                "slide_title2": "titles and images",
+                "focal_point": "center center",
+                "slide_title1": "Beautifully animated"
+              },
+              "type": "image"
+            },
+            "1498501481980-2": {
+              "settings": {
+                "image": "",
+                "slide_title2": "important details",
+                "focal_point": "center center",
+                "slide_title1": "And highlight"
+              },
+              "type": "image"
+            },
+            "1498501481980-1": {
+              "settings": {
+                "image": "",
+                "slide_title2": "to impress",
+                "focal_point": "center center",
+                "slide_title1": "Use this section"
+              },
+              "type": "image"
+            }
+          },
+          "type": "fading-images",
+          "block_order": [
+            "1498501481980-0",
+            "1498501481980-1",
+            "1498501481980-2"
+          ]
+        },
+        "product-sections-template": {
+          "settings": {},
+          "blocks": {
+            "product-text-columns": {
+              "settings": {},
+              "type": "text-columns"
+            },
+            "product-text-and-image": {
+              "settings": {},
+              "type": "text-and-image"
+            },
+            "product-hero-video": {
+              "settings": {},
+              "type": "hero-video"
+            },
+            "product-image-row": {
+              "settings": {},
+              "type": "image-row"
+            },
+            "product-background-image-text": {
+              "settings": {
+                "layout": "right"
+              },
+              "type": "background-image-text"
+            }
+          },
+          "type": "product-sections-template",
+          "block_order": [
+            "product-image-row",
+            "product-text-and-image",
+            "product-background-image-text",
+            "product-text-columns",
+            "product-hero-video"
+          ]
+        }
+      },
+      "content_for_index": [
+        "1499790529450",
+        "1566999869051",
+        "1498163293234",
+        "1499789718857",
+        "1498501481980",
+        "1499790731541",
+        "1499790633921"
+      ],
+      "color_drawer_border": "#e8e8e1",
+      "type_base_size": 17,
+      "icon_linecaps": "miter",
+      "checkout_logo_position": "left",
+      "checkout_logo_size": "medium",
+      "color_drawer_text": "#000000",
+      "type_header_accent_transform": true,
+      "checkout_button_color": "#111111",
+      "checkout_logo_image": "",
+      "type_header_spacing": "0",
+      "checkout_use_header_image": false,
+      "share_twitter": true,
+      "checkout_sidebar_background_color": "#fafafa",
+      "cart_type": "drawer",
+      "checkout_input_background_color_mode": "white",
+      "animate_images_style": "zoom-fade",
+      "color_drawer_background": "#ffffff",
+      "type_base_font_family": "futura_n4",
+      "animate_sections": true,
+      "animate_page_transitions": true,
+      "checkout_banner_background_color": "#ffffff",
+      "checkout_error_color": "#ff6d6d",
+      "color_drawer_button_text": "#ffffff",
+      "color_small_image_bg": "#ffffff",
+      "color_image_1_opacity": 62,
+      "color_drawer_button": "#111111",
+      "animate_sections_background_style": "zoom-fade",
+      "animate_sections_text_style": "rise-up",
+      "animate_page_transition_style": "page-slow-fade",
+      "checkout_heading_font": "Helvetica Neue",
+      "type_header_font_family": "itc_avant_garde_gothic_n7",
+      "type_base_line_height": 1.6,
+      "type_base_spacing": "25",
+      "share_pinterest": true,
+      "checkout_body_background_image": "",
+      "color_footer": "#111111",
+      "breadcrumb": true,
+      "color_image_1": "#000000",
+      "color_image_2": "#000000",
+      "color_borders": "#e8e8e1",
+      "type_header_line_height": 1.2
+    },
+    "Minimal": {
+      "checkout_body_font": "Helvetica Neue",
+      "type_header_base_size": 34,
+      "color_input": "#ffffff",
+      "color_image_bg": "#000000",
+      "color_large_image_bg": "#dedfe1",
+      "checkout_call_to_action_color": "#a26b25",
+      "animate_buttons": true,
+      "color_button": "#111111",
+      "animate_underlines": true,
+      "checkout_header_image": "",
+      "color_image_2_opacity": 0,
+      "checkout_body_background_color": "#ffffff",
+      "checkout_sidebar_background_image": "",
+      "color_modal_overlays": "#aeb1b8",
+      "type_base_accent_transform": true,
+      "icon_weight": "2px",
+      "animate_images": true,
+      "color_footer_text": "#2c2c2c",
+      "quick_shop_text": "Quick view",
+      "share_facebook": true,
+      "checkout_accent_color": "#111111",
+      "color_button_text": "#ffffff",
+      "sections": {
+        "1499789718857": {
+          "settings": {
+            "divider": false,
+            "title": ""
+          },
+          "blocks": {
+            "1499789718857-1": {
+              "settings": {
+                "size": "square-small",
+                "collection": ""
+              },
+              "type": "collection"
+            },
+            "1499789718857-0": {
+              "settings": {
+                "size": "wide",
+                "collection": ""
+              },
+              "type": "collection"
+            },
+            "1499789718857-3": {
+              "settings": {
+                "size": "square-small",
+                "collection": ""
+              },
+              "type": "collection"
+            },
+            "1499789718857-2": {
+              "settings": {
+                "size": "square-small",
+                "collection": ""
+              },
+              "type": "collection"
+            },
+            "1499789718857-5": {
+              "settings": {
+                "size": "wide",
+                "collection": ""
+              },
+              "type": "collection"
+            },
+            "1499789718857-4": {
+              "settings": {
+                "size": "square-small",
+                "collection": ""
+              },
+              "type": "collection"
+            }
+          },
+          "type": "featured-collections",
+          "block_order": [
+            "1499789718857-0",
+            "1499789718857-1",
+            "1499789718857-2",
+            "1499789718857-3",
+            "1499789718857-4",
+            "1499789718857-5"
+          ]
+        },
+        "1499790529450": {
+          "settings": {
+            "video_url": "https:\/\/www.youtube.com\/watch?v=_9VUPq3SxOc",
+            "title_size": 80,
+            "link": "https:\/\/www.youtube.com\/watch?v=_9VUPq3SxOc",
+            "title": "Bring your\nbrand to life.",
+            "subheading": "",
+            "link_text": "Watch",
+            "section_height": "650px"
+          },
+          "type": "hero-video"
+        },
+        "footer": {
+          "settings": {},
+          "blocks": {
+            "1494292485313": {
+              "settings": {
+                "menu": "main-menu",
+                "container_width": 20
+              },
+              "type": "menu"
+            },
+            "1494292487693": {
+              "settings": {
+                "container_width": 33
+              },
+              "type": "newsletter"
+            },
+            "1494292481350": {
+              "settings": {
+                "container_width": 20
+              },
+              "type": "logo_social"
+            },
+            "1494301487049": {
+              "settings": {
+                "menu": "footer",
+                "container_width": 20
+              },
+              "type": "menu"
+            }
+          },
+          "type": "footer",
+          "block_order": [
+            "1494292481350",
+            "1494301487049",
+            "1494292485313",
+            "1494292487693"
+          ]
+        },
+        "collection-template": {
+          "settings": {
+            "collection_image_enable": true,
+            "collection_sort_enable": false,
+            "per_row": 4
+          },
+          "type": "collection-template"
+        },
+        "article-template": {
+          "settings": {
+            "blog_show_comments": true,
+            "blog_show_tags": true,
+            "blog_show_date": true,
+            "social_sharing_blog": true,
+            "blog_show_author": false
+          },
+          "type": "article-template"
+        },
+        "product-template": {
+          "settings": {
+            "social_enable": true,
+            "image_size": "medium"
+          },
+          "type": "product-template"
+        },
+        "1499790633921": {
+          "settings": {
+            "layout": "left",
+            "image": "",
+            "subtitle": "Impressive",
+            "button_link": "",
+            "text": "<p>Pair large text with a full-width image to draw attention to an important detail of your brand or product line.<\/p>",
+            "button_label": "",
+            "title": "Large image and text",
+            "height": 650
+          },
+          "type": "background-image-text"
+        },
+        "blog-template": {
+          "settings": {
+            "blog_show_tag_filter": true,
+            "blog_show_comments": true,
+            "blog_show_rss": false,
+            "blog_show_tags": true,
+            "blog_show_date": true,
+            "blog_show_author": false
+          },
+          "type": "blog-template"
+        },
+        "header": {
+          "settings": {
+            "main_menu_link_list": "main-menu",
+            "sticky_index": false,
+            "sticky_collection": false,
+            "show_announcement": true
+          },
+          "type": "header"
+        },
+        "1498163293234": {
+          "settings": {},
+          "type": "featured-content"
+        },
+        "1566999869051": {
+          "settings": {},
+          "type": "featured-collection-switcher"
+        },
+        "1499790731541": {
+          "settings": {
+            "cta_link2": "",
+            "cta_link1": "",
+            "divider": false,
+            "subtitle": "Brand new",
+            "collection": "",
+            "text": "Use this section to easily call attention to one of your collections. We'll show photos of the first 5 products.",
+            "title": "Collection callout",
+            "cta_text2": "Shop All",
+            "cta_text1": "Shop Jackets"
+          },
+          "type": "collection-callout"
+        },
+        "1498501481980": {
+          "settings": {
+            "slide_speed": 5,
+            "color_overlay_opacity": 30,
+            "color_overlay": "#000000"
+          },
+          "blocks": {
+            "1498501481980-0": {
+              "settings": {
+                "image": "",
+                "slide_title2": "titles and images",
+                "focal_point": "center center",
+                "slide_title1": "Beautifully animated"
+              },
+              "type": "image"
+            },
+            "1498501481980-2": {
+              "settings": {
+                "image": "",
+                "slide_title2": "important details",
+                "focal_point": "center center",
+                "slide_title1": "And highlight"
+              },
+              "type": "image"
+            },
+            "1498501481980-1": {
+              "settings": {
+                "image": "",
+                "slide_title2": "to impress",
+                "focal_point": "center center",
+                "slide_title1": "Use this section"
+              },
+              "type": "image"
+            }
+          },
+          "type": "fading-images",
+          "block_order": [
+            "1498501481980-0",
+            "1498501481980-1",
+            "1498501481980-2"
+          ]
+        }
+      },
+      "content_for_index": [
+        "1499790529450",
+        "1566999869051",
+        "1498163293234",
+        "1499789718857",
+        "1498501481980",
+        "1499790731541",
+        "1499790633921"
+      ],
+      "color_drawer_border": "#f0f1f3",
+      "type_base_size": 16,
+      "icon_linecaps": "round",
+      "checkout_logo_position": "left",
+      "checkout_logo_size": "medium",
+      "color_drawer_text": "#000000",
+      "type_header_accent_transform": true,
+      "checkout_button_color": "#111111",
+      "checkout_logo_image": "",
+      "type_header_spacing": "50",
+      "checkout_use_header_image": false,
+      "share_twitter": true,
+      "checkout_sidebar_background_color": "#fafafa",
+      "cart_type": "drawer",
+      "checkout_input_background_color_mode": "white",
+      "animate_images_style": "fade-in",
+      "color_drawer_background": "#ffffff",
+      "type_base_font_family": "neuzeit_office_n4",
+      "animate_sections": true,
+      "animate_page_transitions": true,
+      "checkout_banner_background_color": "#ffffff",
+      "checkout_error_color": "#ff6d6d",
+      "color_drawer_button_text": "#ffffff",
+      "color_small_image_bg": "#ffffff",
+      "color_image_1_opacity": 26,
+      "color_drawer_button": "#111111",
+      "animate_sections_background_style": "zoom-fade",
+      "animate_sections_text_style": "rise-up",
+      "animate_page_transition_style": "page-slide-reveal-down",
+      "checkout_heading_font": "Helvetica Neue",
+      "type_header_font_family": "chivo_n7",
+      "type_base_line_height": 1.6,
+      "type_base_spacing": "25",
+      "share_pinterest": true,
+      "checkout_body_background_image": "",
+      "color_footer": "#f0f1f3",
+      "breadcrumb": true,
+      "color_image_1": "#000000",
+      "color_image_2": "#000000",
+      "color_borders": "#f0f1f3",
+      "type_header_line_height": 1.2
+    }
+  }
+}

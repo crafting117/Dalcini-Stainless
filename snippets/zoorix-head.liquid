@@ -1,0 +1,35 @@
+<script>
+        window.zoorixCartData = {
+          currency: "{{ cart.currency.iso_code }}",
+          currency_symbol: "{{ cart.currency.symbol }}",
+          {% if cart.items %}
+          original_total_price: {{ cart.original_total_price }},
+          total_discount: {{ cart.total_discount }},
+          item_count: {{ cart.item_count  }},
+          items: [
+              {% for line_item in cart.items %}{
+                product_id: {{ line_item.product_id }},
+                variant_id: {{ line_item.variant_id }}
+                }{% unless forloop.last %},{% endunless %}
+              {% endfor %}
+          ]
+       	  {% endif %}
+        };
+
+      window.Zoorix = window.Zoorix || {};
+      {% if template contains "cart" %}
+        window.Zoorix.page_type = "cart";
+      {% endif %}
+
+      {% if template contains "product" %}
+        window.Zoorix.page_type = "product";
+        window.Zoorix.product_id = "{{ product.id }}";
+      {% endif %}
+      window.Zoorix.moneyFormat = {{ shop.money_format | json }};
+      window.Zoorix.moneyFormatWithCurrency = {{ shop.money_with_currency_format | json }};
+</script>
+
+{% if content_for_header contains 'zoorix.com' %}
+<script async src="https://public.zoorix.com/shops/a1e5e4f8-bc07-42d5-87cf-a06d9a7158de/zoorix.js"></script>
+{% endif %}
+

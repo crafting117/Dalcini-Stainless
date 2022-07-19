@@ -1,0 +1,131 @@
+<script>
+  var mlveda_style = document.createElement('style');
+    mlveda_style.type = 'text/css';
+  
+document.addEventListener('DOMSubtreeModified', function () {
+	Array.from(document.querySelectorAll("form[action*='/cart/add'] *")).filter(
+   		(currentElement) => { 
+        	if ( (currentElement.childElementCount == 0 || currentElement.childElementCount == 1) && !(currentElement.parentElement.querySelector('[type="submit"]') || currentElement.parentElement.querySelector('[name="add"]') || currentElement.parentElement.querySelector('[name="id"]')) && currentElement.innerHTML.toLowerCase().trim().indexOf("mlveda_country") != -1 && currentElement.parentElement.style.display != "none" ) {
+            	currentElement.parentElement.setAttribute("style", "display: none !important");
+              	mlveda_style.innerText = 'form { visibility: visible; }';
+  				document.head.appendChild(mlveda_style);
+            } 
+        }
+	);
+});
+</script>
+
+{% assign mlveda_code_flag = true %}
+
+{% if mlveda_code_flag == true %}
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script>
+      $m = $.noConflict(true);
+  window.pattern = /^(do|sv|ee|fi|fr|gd|gp|gg|hu|is|im|il|kz|ke|kg|la|mo|mk|mh|mq|ms|ma|nl|ne|ng|no|pw|py|pl|pt|kn|st|sc|sg|sk|za|sr|sj|th|to|tm|tc|uz|vu|vn|zm|af|al|as|ao|ai|an|ag|ar|as|bb|by|aq|bm|bq|bv|au|vg|bs|cv|bh|cf|bd|cn|be|co|ba|ci|bw|dk|bn|dm|bi|cd|cm|ec|ca|eg|td|gq|cx|er|cc|et|cr|eu|ga|gh|cy|gi|dj|gu|eu|gt|fk|gn|fo|gw|gf|hm|pf|hn|gm|iq|ge|ie|de|jm|gr|jp|in|ki|id|lr|je|mw|lv|my|ly|mu|li|yt|mv|mx|mc|mn|mz|nr|np|ni|nu|nf|pk|na|ph|oc|pn|om|qa|pg|re|pr|sh|ro|ru|rw|sm|bl|rs|pm|sx|vc|gs|sa|sd|sl|se|si|tj|tz|sb|tt|sa|tn|es|gb|lk|va|ch|zw|sy|tw|tl|tg|tr|um|vi|ug|us|uy|ve|af|ax|dz|ad|am|aw|at|az|bz|bj|bt|bo|br|io|bg|bf|kh|ky|cl|km|cg|ck|hr|cu|cw|cz|fj|tf|gl|gy|ht|hk|ir|it|jo|kw|lb|ls|lt|lu|mg|ml|mt|mr|fm|md|me|mm|na|nc|nz|kp|mp|ps|pa|pe|lc|mf|ws|sn|so|kr|ss|sz|tk|tv|ua|ae|wf|eh|ye|intl)$/;
+    </script>
+
+<script>
+  
+  mlveda_style.innerText = 'form { visibility: hidden; }';
+  document.head.appendChild(mlveda_style);
+  
+  document.addEventListener("DOMContentLoaded" ,function(){
+    setTimeout(function(){
+      	mlveda_style.innerText = 'form { visibility: visible; }';
+  		document.head.appendChild(mlveda_style);
+      },50);
+  });
+  
+{{ settings.mlvedaMCP_isSaleClass }} && $m("<style type='text/css'>{{ settings.mlvedaMCP_saleClass }}{ visibility : hidden; }</style>").appendTo("head");
+{{ settings.mlvedaMCP_isSaveAmount }} && $m("<style type='text/css'>{{ settings.mlvedaMCP_saveAmountClass }}{ visibility : hidden; }</style>").appendTo("head");
+{{ settings.mlvedaMCP_isSalePercentage }} && $m("<style type='text/css'>{{ settings.mlvedaMCP_salePercentageClass }}{ visibility : hidden; }</style>").appendTo("head");
+$m("<style type='text/css'>span.money{ display : none; }</style>").appendTo("head");
+          
+          {% if template contains 'product' or template == 'index' %}
+            $m("<style type='text/css'>form[action*='/cart/add'] [type='submit']{visibility : hidden;}</style>").appendTo("head");
+          {% endif %}  
+		</script>
+
+
+
+<script>
+window.mlvedaShopCurrency = "{{ shop.currency }}";
+window.shopCurrency = "{{ shop.currency }}";
+window.supported_currencies = "{{ settings.supported_currencies }}";
+window.regex_mlveda_country1 = /mlveda_country\s*:\s*(<(([a-z]+)\s*([^>]*))>)*\w+(<\/\3>)*/g;
+window.regex_mlveda_country2 = /(<(([a-z]+)\s*([^>]*))>)*mlveda_country:{0,1}(<\/\3>)*:{0,1}\s*(<(([a-z]+)\s*([^>]*))>)*\w+(<\/\8>)*/g;
+window.lets_remove_mlveda = false;
+</script>
+  
+
+<script>
+    var mlveda_country_removed = true;
+  document.addEventListener('DOMContentLoaded', function () {
+    mlveda_country_removed = false;
+  });
+
+document.addEventListener('DOMSubtreeModified', function () {
+  if ( mlveda_country_removed ) {
+      Array.from($m("body").find(':contains("mlveda_country")')).filter(
+        (currentElement) => {
+        if ( currentElement.childElementCount == 0 && $m(currentElement).parents("form[action*='/cart/add']").length == 0 && currentElement.nodeName != 'SCRIPT' && currentElement.parentElement) {
+          if ( currentElement.parentElement.innerHTML.indexOf("mlveda_country:<") != - 1 || currentElement.parentElement.innerHTML.indexOf("mlveda_country<") != - 1 ) {
+            var match = currentElement.parentElement.innerHTML.match(regex_mlveda_country2);
+          } else {
+            var match = currentElement.parentElement.innerHTML.match(regex_mlveda_country1);
+          }
+          if ( match ) {
+            currentElement.parentElement.innerHTML = currentElement.parentElement.innerHTML.replace(match[0],"");
+          }
+        }
+      }
+    );
+  }
+});
+</script>
+
+
+{% if shop.enabled_currencies.size > 1 %}
+  <script>
+window.shopify_supported_currencies = "";
+{% for currency in shop.enabled_currencies %}
+   shopify_supported_currencies = shopify_supported_currencies + "{{ currency.iso_code }} ";
+{% endfor %}
+</script>
+{% if cart.currency.iso_code != shop.currency and template != 'cart' %}
+ <script>
+  {% if template contains 'search' %}
+     if(!Shopify.designMode){
+     window.location.href = location.pathname + "?currency={{ shop.currency }}" + location.search.replace("?", "&");
+     } 
+   {% else %}
+    if(!Shopify.designMode){
+    window.location.href = "/cart/update?currency={{ shop.currency }}&return_to="+(location.pathname+location.search);
+    }
+    {% endif %}
+ </script>
+ {% endif %}
+{% if template == "cart" %}
+ <script>
+   function mlvedaReadCookie(name) {
+   var nameEQ = name + "=";
+   var ca = document.cookie.split(';');
+   for (var i = 0; i < ca.length; i++) {
+       var c = ca[i];
+       while (c.charAt(0) == ' ')
+           c = c.substring(1, c.length);
+       if (c.indexOf(nameEQ) == 0)
+           return c.substring(nameEQ.length, c.length);
+   }
+   return null;
+   }
+   if( mlvedaReadCookie("acscurrency") !== "{{ cart.currency.iso_code }}" && shopify_supported_currencies.indexOf(mlvedaReadCookie("acscurrency")) != -1) {
+      if (!Shopify.designMode) {
+      window.location.href = "/cart/update?currency="+mlvedaReadCookie("acscurrency")+"&return_to="+(location.pathname+location.search);
+   }
+   }
+   </script>
+ {% endif %}
+{% endif %}
+
+{% endif %}

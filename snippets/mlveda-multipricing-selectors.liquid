@@ -1,0 +1,236 @@
+{% if mlveda_code_flag == true %}
+
+<script>one_more_flag = false;</script>
+{% if template contains 'product' %}
+<script>
+   
+  {% for option in product.options %}
+  		{%  if option contains 'mlveda_country' %}
+			one_more_flag = true;	
+		{% endif %}
+	{% endfor %}
+ // console.log("one_more_flag : ",one_more_flag);
+$m("<style type=\"text/css\">  div.mlvedaform span.money {visibility:hidden;}</style>").appendTo("head");
+   
+</script>
+{% endif %}
+<script>
+  //console.log("here");
+var mlvedaCallUrl = "//www.mlveda.com/ShopifyApps/ShopifyMultiPricing/getLocation?shop={{ shop.permanent_domain }}&rnd=" + Math.floor((Math.random() * 10000000000) + 1);
+      
+var syncWithThemePageFlag = false;   
+
+  
+  // $m(document).ready(function(){
+         
+  //  });
+  
+  
+  
+  
+var country = null;
+var continent = null;
+var countryFound = false;  
+var continentFound = false
+      var abcd = $m.ajax({
+        url: mlvedaCallUrl,
+        type: "GET",
+        dataType: "json",
+        async: true,
+        timeout: 10000,
+        success: function(response) {
+        if (response === "") {
+       		$m("<style type=\"text/css\">  div.mlvedaform span.money {visibility:visible;}</style>").appendTo("head");
+ 							{% if template contains 'product' %}
+                              $m("<style type=\"text/css\">form[action*='/cart/add'] [type='submit']{visibility : visible;}</style>").appendTo("head");
+                            {% endif %}          
+      	}
+        else {
+          var new_flag = false;
+              country = response.country;
+        	  continent = response.continent;
+        //console.log("success");
+          //console.log($m("fieldset.mlveda_country").val());
+   				 if (($m("fieldset.mlveda_country").val() !== country && country!=null) || ($m("fieldset.mlveda_country").val() !== continent && continent!=null) || $m("fieldset.mlveda_country").val() !== "intl")
+    			{
+      			//console.log($m("fieldset.mlveda_country").parent().find("select").val());
+      			//console.log("country is " + country);
+				$m("fieldset.mlveda_country").each(function(){	
+					if ($m(this).find('input[value='+ country  + ']').length !=0 || $m(this).find('input[value='+ continent  + ']').length !=0 || $m(this).find('input[value="intl"]').length !=0)
+					{
+						if(mlveda_condition_flag){
+						  if($m(this).find('input[value='+ country  + ']').length !=0) {
+							//console.log("country found from ajax");
+							//console.log($m(this).val());
+							//var mlveda_interval = setInterval(() => {
+							  new_flag = true;
+							//console.log("setInterval");
+							  //if($ && $._data($("form[action*='/cart/add'] fieldset input")[0]).events && $._data($("form[action*='/cart/add'] fieldset input")[0]).events.change[0]){
+							   //clearInterval(mlveda_interval);
+							   //console.log("in set timeout");
+							   $m(this).attr("mlveda_country_found","true");
+							  $m("fieldset.mlveda_country").find("input:radio[value="+country+"]").click();
+                          	  			  $m("fieldset.mlveda_country").find("input:radio[value="+country+"]").val(country).trigger("click");
+							  $m("fieldset.mlveda_country").val(country)[0].dispatchEvent(new Event("change",{bubbles : true}));
+
+							  //} 
+							//}, 100);
+							
+						  }
+						  else if($m(this).find('input[value='+ continent  + ']').length !=0) {
+							//var mlveda_interval = setInterval(() => {
+							  new_flag = true;
+							//console.log("setInterval");
+							  //if($ && $._data($("form[action*='/cart/add'] fieldset input")[0]).events && $._data($("form[action*='/cart/add'] fieldset input")[0]).events.change[0]){
+							   //clearInterval(mlveda_interval);
+							   //console.log("in set timeout");
+							   $m(this).attr("mlveda_continent_found","true");
+                              				  $m("fieldset.mlveda_country").find("input:radio[value="+continent+"]").click();
+			                          	  $m("fieldset.mlveda_country").find("input:radio[value="+continent+"]").val(continent).trigger("click");
+							  $m("fieldset.mlveda_country").val(continent)[0].dispatchEvent(new Event("change",{bubbles : true}));
+
+							  //} 
+							//}, 100);
+							
+						  }
+						  else {
+							//console.log("In the else");
+							//var mlveda_interval = setInterval(() => {
+							  new_flag = true;
+							//console.log("setInterval");
+							  //if($ && $._data($("form[action*='/cart/add'] fieldset input")[0]).events && $._data($("form[action*='/cart/add'] fieldset input")[0]).events.change[0]){
+							   //clearInterval(mlveda_interval);
+							   //console.log("in set timeout");
+							  $m("fieldset.mlveda_country").find("input:radio[value='intl']").click();
+			                          	  $m("fieldset.mlveda_country").find("input:radio[value='intl']").val("intl").trigger("click");
+							  $m("fieldset.mlveda_country").val("intl")[0].dispatchEvent(new Event("change",{bubbles : true}));
+
+							  //} 
+							//}, 100);
+							
+						  }
+						  //console.log("here--1");
+						  if(new_flag){
+						  $m("<style type=\"text/css\">  div.mlvedaform span.money {visibility:visible;}</style>").appendTo("head");
+ 							{% if template contains 'product' %}
+                              //$m("<style type=\"text/css\">form[action*='/cart/add'] [type='submit']{visibility : visible;}</style>").appendTo("head");
+                            {% endif %}                                      
+						  }
+						}
+					}
+					  else{
+						$m("<style type=\"text/css\">  div.mlvedaform span.money {visibility:visible;}</style>").appendTo("head");
+ 							{% if template contains 'product' %}
+                              //$m("<style type=\"text/css\">form[action*='/cart/add'] [type='submit']{visibility : visible;}</style>").appendTo("head");
+                            {% endif %}                                  
+					  }
+				});
+                 if(!one_more_flag){ 
+                   if($m("fieldset.mlveda_country").find("input").length <=1)
+                   {
+                     //console.log("1112");
+                     $m("<style type=\"text/css\">  div.mlvedaform span.money {visibility:visible;}</style>").appendTo("head");
+                            {% if template contains 'product' %}
+                              //$m("<style type=\"text/css\">form[action*='/cart/add'] [type='submit']{visibility : visible;}</style>").appendTo("head");
+                            {% endif %}                     
+                     $m("<style type=\"text/css\"> div.mlvedaform h2.price {visibility:visible;}</style>").appendTo("head");
+                   }
+                 }
+                         
+    			}	
+          		
+            } 
+        },
+        error: function(xhr, textStatus, errorThrown) {
+            $m("<style type=\"text/css\">  div.mlvedaform span.money {visibility:visible;}</style>").appendTo("head");
+ 							{% if template contains 'product' %}
+                              $m("<style type=\"text/css\">form[action*='/cart/add'] [type='submit']{visibility : visible;}</style>").appendTo("head");
+                            {% endif %}                  
+        //console.log("timeout");
+      }
+});
+  
+$m("body").delegate("fieldset", "change", function(event) {
+//console.log("change trigerred");
+    //console.log($m("fieldset#"+mlveda_select_id+".mlveda_country").val());
+//  console.log($m("fieldset#"+mlveda_select_id+".mlveda_country input:radio[name='mlveda_country']:checked"));
+
+  //console.log("this",$(this));
+  //console.log("this value",$(this).val());
+    if(country !== null && continent !== null){
+			//if ($m("fieldset.mlveda_country > input:radio[name='mlveda_country']:checked").val() && $m("fieldset.mlveda_country > input:radio[name='mlveda_country']:checked").val() !== country && country!=null && $m("fieldset.mlveda_country").find('input:radio[value='+country+']').length !=0)
+              if ($m("fieldset.mlveda_country input:radio:checked").val() && $m("fieldset.mlveda_country input:radio:checked").val() !== country && country!=null && $m("fieldset.mlveda_country").find('input:radio[value='+country+']').length !=0)			
+
+				{
+			  //console.log($m("fieldset.mlveda_country").parent().find("select").val());
+			  //console.log("country is " + country);
+			 // console.log("country is : "+$m("fieldset.mlveda_country").find('input:radio[value='+ country  + ']').length);
+			  if ($m("fieldset.mlveda_country").find('input:radio[value='+ country  + ']').length !=0)
+			{
+			  //console.log("country found")  ;
+			  countryFound = true;
+			  $m(this).attr("mlveda_country_found","true");
+			
+				$m("fieldset.mlveda_country").find("input:radio[value="+country+"]").click();
+                $m("fieldset.mlveda_country").find("input:radio[value="+country+"]").val(country).trigger("click");
+				$m("fieldset.mlveda_country").val(country)[0].dispatchEvent(new Event("change",{bubbles : true}));
+				
+				$m('span.money span.money').each(function() {
+					$m(this).parents('span.money').removeClass('money');
+				});
+			}
+			$m("<style type=\"text/css\">  div.mlvedaform span.money {visibility:visible;}</style>").appendTo("head");
+ 				{% if template contains 'product' %}
+                              //$m("<style type=\"text/css\">form[action*='/cart/add'] [type='submit']{visibility : visible;}</style>").appendTo("head");
+                            {% endif %}                        
+			}
+		 
+		  else if ($m("fieldset.mlveda_country input:radio:checked").val() && $m("fieldset.mlveda_country input:radio:checked").val() !== continent && continent!=null && $m(this).attr("mlveda_country_found") === undefined && $m("fieldset.mlveda_country").find('input:radio[value='+ continent + ']').length !=0)
+			{
+			  
+			  //console.log($m("fieldset.mlveda_country").parent().find("select").val());
+			  //console.log("continent is " + continent);
+			if ($m("fieldset.mlveda_country").find('input[value='+ continent  + ']').length !=0)
+			{
+					//console.log("continent found") ; 
+
+			  continentFound = true;
+			  $m(this).attr("mlveda_continent_found","true");
+			  //$m("fieldset.mlveda_country > input:radio[name='mlveda_country'][value="+country+"]").val(country).trigger("click");
+				$m("fieldset.mlveda_country").find("input:radio[value="+continent+"]").click();
+                $m("fieldset.mlveda_country").find("input:radio[value="+continent+"]").val(continent).trigger("click");
+				$m("fieldset.mlveda_country").val(continent)[0].dispatchEvent(new Event("change",{bubbles : true}));
+
+				$m('span.money span.money').each(function() {
+					$m(this).parents('span.money').removeClass('money');
+				});
+			}
+			$m("<style type=\"text/css\">  div.mlvedaform span.money {visibility:visible;}</style>").appendTo("head");
+ 				{% if template contains 'product' %}
+                              //$m("<style type=\"text/css\">form[action*='/cart/add'] [type='submit']{visibility : visible;}</style>").appendTo("head");
+                            {% endif %}                        
+			}
+		  else
+		  {
+			if ( $m(this).attr("mlveda_country_found") === undefined && $m(this).attr("mlveda_continent_found") === undefined && $m("fieldset.mlveda_country input:radio:checked").val() && $m("fieldset.mlveda_country input:radio:checked").val() !== 'intl' && $m("fieldset.mlveda_country").find('input[value="intl"]').length !=0)
+			{
+					//console.log("intl found");
+              	$m("fieldset.mlveda_country").find("input:radio[value='intl']").click();
+                $m("fieldset.mlveda_country").find("input:radio[value='intl']").val(continent).trigger("click");
+				$m("fieldset.mlveda_country").val('intl')[0].dispatchEvent(new Event("change",{bubbles : true}));
+				$m('span.money span.money').each(function() {
+					$m(this).parents('span.money').removeClass('money');
+				});
+			}
+				$m("<style type=\"text/css\">  div.mlvedaform span.money {visibility:visible;}</style>").appendTo("head");
+ 							{% if template contains 'product' %}
+                             // $m("<style type=\"text/css\">form[action*='/cart/add'] [type='submit']{visibility : visible;}</style>").appendTo("head");
+                            {% endif %}                      
+			
+		  }
+	}
+});	
+
+</script>
+
+{% endif %}
