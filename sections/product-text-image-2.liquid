@@ -1,0 +1,139 @@
+<div class="page-width service-intro">
+    <div class="section-wrapper flex">
+        <div class="section-block mobile mobile-center">
+            <h3 class="section-header__title">{{ section.settings.heading | escape }}</h3>
+            <p class="item-text">{{ section.settings.text1 | escape }}</p>
+        </div>
+        <div class="section-block image left">
+            {% if section.settings.left_image != blank %}
+                <div class="image-wrap" style="height: 0; padding-bottom: {{ 100 | divided_by: section.settings.left_image.aspect_ratio }}%;">
+                    {%- assign img_url = section.settings.left_image | img_url: '1x1' | replace: '_1x1.', '_{width}x.' -%}
+                    <img class="lazyload"
+                        data-src="{{ img_url }}"
+                        data-widths="[180, 360, 540, 720, 900, 1080]"
+                        data-aspectratio="{{ section.settings.left_image.aspect_ratio }}"
+                        data-sizes="auto"
+                        alt="{{ section.settings.left_image.alt }}">
+                </div>
+            {% else %}
+                <div class="image-wrap">
+                    {{ 'image' | placeholder_svg_tag: 'placeholder-svg' }}
+                </div>
+            {% endif %}
+        </div>
+        <div class="section-block desktop mobile-center">
+            <h3 class="section-header__title mobile-hide">{{ section.settings.heading | escape }}</h3>
+            <p class="item-text mobile-hide">{{ section.settings.text1 | escape }}</p>
+            <p class="item-text">{{ section.settings.text2 | escape }}</p>
+            <p class="item-text">{{ section.settings.text3 | escape }}</p>
+        </div>
+        <div class="section-block image right">
+            {% if section.settings.right_image != blank %}
+                <div class="image-wrap" style="height: 0; padding-bottom: {{ 100 | divided_by: section.settings.right_image.aspect_ratio }}%;">
+                    {%- assign img_url = section.settings.right_image | img_url: '1x1' | replace: '_1x1.', '_{width}x.' -%}
+                    <img class="lazyload"
+                        data-src="{{ img_url }}"
+                        data-widths="[180, 360, 540, 720, 900, 1080]"
+                        data-aspectratio="{{ section.settings.right_image.aspect_ratio }}"
+                        data-sizes="auto"
+                        alt="{{ section.settings.right_image.alt }}">
+                </div>
+            {% else %}
+                <div class="image-wrap">
+                    {{ 'image' | placeholder_svg_tag: 'placeholder-svg' }}
+                </div>
+            {% endif %}
+        </div>
+    </div>
+</div>
+<style>
+    .service-intro .section-block {
+        width: calc(100% / 3);
+    }
+    .service-intro .flex {
+        display: flex;
+        align-items: flex-start;
+    }
+    .service-intro .section-wrapper {
+        padding-top: 150px;
+        padding-bottom: 60px;
+    }
+    .service-intro .section-header__title {
+        margin-bottom: 20px;
+    }
+    @media (min-width: 590px) {
+        .service-intro .section-block.image.left {
+            padding-right: 60px;
+        }
+        .service-intro .section-block.image.right {
+            padding-left: 60px;
+        }
+        .service-intro .section-block.mobile {
+            display: none;
+        }
+    }
+    @media (max-width: 589px) {
+        .service-intro .section-block {
+            width: 100%;
+        }
+        .service-intro .section-block.image {
+            width: calc(100% + 40px);
+        }
+        .service-intro .flex {
+            flex-direction: column;
+            align-items: center;
+        }
+        .service-intro .section-wrapper {
+            padding-top: 50px;
+        }
+        .service-intro .section-block.mobile {
+            display: block;
+        }
+        .service-intro .mobile-hide {
+            display: none;
+        }
+        .service-intro .mobile-center {
+            text-align: center;
+        }
+        .service-intro .section-block.image.left {
+            margin-bottom: 20px;
+        }
+    }
+</style>
+{% schema %}
+{
+    "name": "Product text and image 2",
+    "settings": [
+        {
+            "type": "text",
+            "id": "heading",
+            "label": "Heading"
+        },
+        {
+            "type": "textarea",
+            "id": "text1",
+            "label": "Text 1"
+        },
+        {
+            "type": "textarea",
+            "id": "text2",
+            "label": "Text 2"
+        },
+        {
+            "type": "textarea",
+            "id": "text3",
+            "label": "Text 3"
+        },
+        {
+            "type": "image_picker",
+            "id": "left_image",
+            "label": "Left image"
+        },
+        {
+            "type": "image_picker",
+            "id": "right_image",
+            "label": "Right image"
+        }
+    ]
+}
+{% endschema %}

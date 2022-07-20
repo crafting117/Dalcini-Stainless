@@ -1,0 +1,202 @@
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.css" type="text/css">
+
+<div class="page-width food-storage-intro mobile-center">
+    <h3 class="section-header__title">{{ section.settings.heading | escape }}</h3>
+    <div class="section-wrapper flex">
+        <div class="inner-wrapper width-2">
+            {% for block in section.blocks %}
+                {% assign remainder = forloop.index0 | modulo: 2 %}
+                
+                {% if remainder == 0 %}
+                    <div class="items-wrapper flex-start">    
+                {% endif %}
+                    <div class="item-wrapper width-50">
+                        <img src="{{ block.settings.item_image | img_url: 'master' }}" alt="{{ block.settings.item_heading | escape }}">
+                        <h4 class="item-title">{{ block.settings.item_heading | escape }}</h4>
+                        <p class="item-text">{{ block.settings.item_text | escape }}</p>
+                    </div>
+                {% if remainder == 1 %}
+                    </div>
+                {% endif %}
+                
+            {% endfor %}
+        </div>
+        <div class="inner-wrapper width-1">
+            {% if section.settings.image != blank %}
+                <div class="image-wrap" style="height: 0; padding-bottom: {{ 100 | divided_by: section.settings.image.aspect_ratio }}%;">
+                    {%- assign img_url = section.settings.image | img_url: '1x1' | replace: '_1x1.', '_{width}x.' -%}
+                    <img class="lazyload"
+                        data-src="{{ img_url }}"
+                        data-widths="[180, 360, 540, 720, 900, 1080]"
+                        data-aspectratio="{{ section.settings.image.aspect_ratio }}"
+                        data-sizes="auto"
+                        alt="{{ section.settings.image.alt }}">
+                </div>
+            {% else %}
+                <div class="image-wrap">
+                    {{ 'image' | placeholder_svg_tag: 'placeholder-svg' }}
+                </div>
+            {% endif %}
+        </div>
+    </div>
+</div>
+<style>
+    .food-storage-intro .flex {
+        display: flex;
+        align-items: center;
+    }
+    .food-storage-intro .flex-start {
+        display: flex;
+        align-items: flex-start;
+    }
+    .food-storage-intro .width-2 {
+        width: calc(100% / 3 * 2);
+    }
+    .food-storage-intro .width-1 {
+        width: calc(100% / 3);
+    }
+    .food-storage-intro .width-50 {
+        width: 50%;
+    }
+    .food-storage-intro .items-wrapper {
+        padding-top: 50px;
+    }
+    .food-storage-intro .items-wrapper .item-wrapper {
+        padding-right: 50px;
+    }
+    .food-storage-intro .items-wrapper .item-wrapper:last-child {
+        padding-left: 20px;
+    }
+    .food-storage-intro .item-title {
+        margin-top: 20px;
+        margin-bottom: 15px;
+        font-weight: 600;
+    }
+    .food-storage-intro .item-text {
+        margin: 0;
+    }
+    .section-header__title {
+        font-weight: 500;
+    }
+    @media (max-width: 589px) {
+        .food-storage-intro .flex, .food-storage-intro .flex-start {
+            flex-direction: column;
+        }
+        .food-storage-intro .width-1 {
+            width: calc(100% + 40px);
+        }
+        .food-storage-intro .width-2, .food-storage-intro .width-50 {
+            width: 100%;
+        }
+        .food-storage-intro .items-wrapper .item-wrapper {
+            padding: 0;
+            padding-top: 30px;
+        }
+        .food-storage-intro .items-wrapper .item-wrapper:last-child {
+            padding: 0;
+            padding-top: 30px;
+        }
+        .food-storage-intro .items-wrapper {
+            padding: 0;
+        }
+        .food-storage-intro.mobile-center {
+            text-align: center;
+        }
+        .food-storage-intro .inner-wrapper:first-child {
+            padding-bottom: 30px;
+        }
+        .slick-slide img {
+            margin: 0 auto;
+        }
+        .slick-dots {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0;
+            margin-top: 30px;
+            gap: 8px;
+        }
+        .slick-dots li {
+            list-style: none;
+            width: 8px;
+            height: 8px;
+            background: #D9D9D9;
+            border-radius: 50%;
+        }
+        .slick-dots li.slick-active {
+            width: 14px;
+            height: 14px;
+            background: #FFFFFF;
+            border: 2px solid #1C1D1D;
+        }
+        .slick-dots li button {
+            display: none;
+        }
+
+    }
+</style>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" defer="defer"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js" defer="defer"></script>
+<!-- <script defer src="{{ 'matchHeight.js' | asset_url }}"></script> -->
+<script>
+    $(document).ready(function() {
+        $('.food-storage-intro .inner-wrapper.width-2').slick({
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            arrows: false,
+            infinite: false,
+            dots: true,
+            mobileFirst: true,
+            responsive: [
+                {
+                    breakpoint: 589,
+                    settings: 'unslick'
+                }
+            ]
+        });
+        // $('.food-storage-intro .item-title').matchHeight();
+        // $('.food-storage-intro .item-text').matchHeight();
+    })
+</script>
+{% schema %}
+{
+    "name": "Product text and image 1",
+    "settings": [
+        {
+            "type": "text",
+            "id": "heading",
+            "label": "Heading"
+        },
+        {
+            "type": "image_picker",
+            "id": "image",
+            "label": "Image"
+        }
+    ],
+    "max_blocks": 4,
+    "blocks": [
+        {
+           "type": "text",
+            "name": "Text and Image",
+            "settings": [
+                {
+                    "type": "image_picker",
+                    "id": "item_image",
+                    "label": "Image"
+                },
+                {
+                    "type": "text",
+                    "id": "item_heading",
+                    "label": "Heading"
+                },
+                {
+                    "type": "textarea",
+                    "id": "item_text",
+                    "label": "Text"
+                }
+            ]
+        }
+    ]
+}
+{% endschema %}

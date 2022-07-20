@@ -1,0 +1,98 @@
+.product-single__description {
+    margin-bottom: 10px;
+}
+.product-single__description ul {
+    margin: 0;
+}
+.product-single__description ul li {
+    list-style: none;
+    padding-left: 24px;
+    position: relative;
+    margin-bottom: 12px;
+}
+.product-single__description ul li::before {
+    content: '';
+    width: 12px;
+    height: 12px;
+    background: #1C1D1D;
+    border-radius: 4px;
+    position: absolute;
+    left: 0;
+    top: 7px;
+}
+.product-single__form {
+    margin-bottom: 15px;
+}
+.payment-buttons {
+    display: flex;
+    align-items: center;
+}
+.product__quantity {
+    margin-bottom: 0;
+    margin-right: 12px;
+}
+.js-qty__wrapper {
+    max-width: 120px;
+    min-width: 113px;
+}
+.js-qty__num {
+    border: 1px solid #1C1D1D;
+    border-radius: 6px;
+    padding: 10px 20px;
+}
+.payment-buttons .js-qty__adjust--minus:hover {
+    border-left: 1px solid #1C1D1D;
+    border-top: 1px solid #1C1D1D;
+    border-bottom: 1px solid #1C1D1D;
+    border-radius: 6px 0px 0px 6px;
+}
+.payment-buttons .js-qty__adjust--plus:hover {
+    border-right: 1px solid #1C1D1D;
+    border-top: 1px solid #1C1D1D;
+    border-bottom: 1px solid #1C1D1D;
+    border-radius: 0px 6px 6px 0px;
+}
+.js-qty__adjust {
+    padding: 0 12px;
+
+}
+.payment-buttons .add-to-cart {
+    min-height: 48px;
+    border-radius: 6px;
+    color: white !important;
+    max-width: 240px;
+}
+.product-single__description.mobile {
+    display: none;
+}
+.product-meta-top-mobile {
+    display: none;
+}
+.hr--medium {
+    margin: 25px auto;
+}
+@media (max-width: 589px) {
+    .payment-buttons {
+        justify-content: space-between;
+    }
+    .product-bbg-metafield {
+        text-align: center;
+        margin-bottom: 20px;
+    }
+    .product-single__description.desktop {
+        display: none;
+    }
+    .product-single__description.mobile {
+        display: block;
+    }
+    .hr--medium {
+        display: none;
+    }
+    .product-meta-top-mobile {
+        display: block;
+        padding-bottom: 15px;
+    }
+    .product-meta-top-desktop {
+        display: none;
+    }
+}
