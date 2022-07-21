@@ -51,6 +51,7 @@
     <div class="page-content">
       <div class="page-width">
         <div class="grid">
+
           {% capture product_meta_top1 %}
             {%- if settings.vendor_enable -%}
               <div class="product-single__vendor">
@@ -75,11 +76,9 @@
               </h1>
             {%- endif -%}
               
-            {% comment %}Start automatically added Judge.me widget{% endcomment %}
             <div class="text-center1">
                 {% render 'judgeme_widgets', widget_type: 'judgeme_preview_badge', concierge_install: true, product: product %}
             </div>
-            {% comment %}End automatically added Judge.me widget{% endcomment %}
 
             {%- if settings.enable_product_reviews and settings.reviews_layout == 'full' -%}
               {%- if isModal -%}
@@ -99,88 +98,70 @@
                   {%- endif -%}
               </p>
             {%- endif -%}
-
-            {%- assign hide_sale_price = true -%}
-            {%- if product.compare_at_price_max > product.price -%}
-              {%- if current_variant.compare_at_price -%}
-                  {%- assign hide_sale_price = false -%}
-              {%- endif -%}
-              <span
-                  id="PriceA11y-{{ section_id }}"
-                  class="visually-hidden"
-                  aria-hidden="{{ hide_sale_price }}">
-                  {{ 'products.general.regular_price' | t }}
-              </span>
-              <span class="product__price-wrap-{{ section_id }}{% if hide_sale_price %} hide{% endif %}">
-                  <span id="ComparePrice-{{ section_id }}" class="product__price product__price--compare">
-                  {%- if current_variant.compare_at_price > current_variant.price -%}
-                      {{ current_variant.compare_at_price | money }}
-                  {%- endif -%}
-                  </span>
-              </span>
-              <span id="ComparePriceA11y-{{ section_id }}" class="visually-hidden">{{ 'products.general.sale_price' | t }}</span>
-            {%- else -%}
-              <span id="PriceA11y-{{ section_id }}" class="visually-hidden">{{ 'products.general.regular_price' | t }}</span>
-            {%- endif -%}
           {% endcapture %}
+
           {% capture product_meta_top2 %}
             <div id="mobile_price_div">
+              {%- assign hide_sale_price = true -%}
+              {%- if product.compare_at_price_max > product.price -%}
+                {%- if current_variant.compare_at_price -%}
+                    {%- assign hide_sale_price = false -%}
+                {%- endif -%}
+                <span
+                    id="PriceA11y-{{ section_id }}"
+                    class="visually-hidden"
+                    aria-hidden="{{ hide_sale_price }}">
+                    {{ 'products.general.regular_price' | t }}
+                </span>
+                <span class="product__price-wrap-{{ section_id }}{% if hide_sale_price %} hide{% endif %}">
+                    <span id="ComparePrice-{{ section_id }}" class="product__price product__price--compare">
+                    {%- if current_variant.compare_at_price > current_variant.price -%}
+                        {{ current_variant.compare_at_price | money }}
+                    {%- endif -%}
+                    </span>
+                </span>
+                <span id="ComparePriceA11y-{{ section_id }}" class="visually-hidden">{{ 'products.general.sale_price' | t }}</span>
+              {%- else -%}
+                <span id="PriceA11y-{{ section_id }}" class="visually-hidden">{{ 'products.general.regular_price' | t }}</span>
+              {%- endif -%}
+
               <span id="ProductPrice-{{ section_id }}"
               class="product__price{% if current_variant.compare_at_price > current_variant.price %} sale-price{% endif %}">
               {{ current_variant.price | money }}
               </span>
+              
+              <div class="product__unit-price product__unit-price-wrapper--{{ section_id }}{% unless current_variant.unit_price_measurement %} hide{% endunless %}">
+                {%- capture unit_price_base_unit -%}
+                  <span class="product__unit-base--{{ section_id }}">
+                  {%- if current_variant.unit_price_measurement -%}
+                      {%- if current_variant.unit_price_measurement.reference_value != 1 -%}
+                      {{ current_variant.unit_price_measurement.reference_value }}
+                      {%- endif -%}
+                      {{ current_variant.unit_price_measurement.reference_unit }}
+                  {%- endif -%}
+                  </span>
+                {%- endcapture -%}
+                <span class="product__unit-price--{{ section_id }}">{{ current_variant.unit_price | money }}</span>/{{ unit_price_base_unit }}
+              </div>
             </div>
           {% endcapture %}
-          {% capture product_meta_top3 %}
-            <div class="product__unit-price product__unit-price-wrapper--{{ section_id }}{% unless current_variant.unit_price_measurement %} hide{% endunless %}">
-              {%- capture unit_price_base_unit -%}
-                <span class="product__unit-base--{{ section_id }}">
-                {%- if current_variant.unit_price_measurement -%}
-                    {%- if current_variant.unit_price_measurement.reference_value != 1 -%}
-                    {{ current_variant.unit_price_measurement.reference_value }}
-                    {%- endif -%}
-                    {{ current_variant.unit_price_measurement.reference_unit }}
-                {%- endif -%}
-                </span>
-              {%- endcapture -%}
 
-              <span class="product__unit-price--{{ section_id }}">{{ current_variant.unit_price | money }}</span>/{{ unit_price_base_unit }}
-            </div>
-            {%- comment -%}
-            {%- if shop.taxes_included or shop.shipping_policy.body != blank -%}
-            <div class="product__policies rte">
-                <small>
-                {%- if shop.taxes_included -%}
-                    {{ 'products.product.include_taxes' | t }}
-                {%- endif -%}
-                {%- if shop.shipping_policy.body != blank -%}
-                    {{ 'products.product.shipping_policy_html' | t: link: shop.shipping_policy.url }}
-                {%- endif -%}
-                </small>
-            </div>
-            {%- endif -%}
-            {%- endcomment -%}
+          {% capture product_meta_top3 %}
             {%- if settings.inventory_enable or settings.inventory_transfers_enable -%}
               {%- assign variants_with_inventory_tracking = product.variants | where: 'inventory_management', 'shopify' -%}
               <script>
                 window.inventories = window.inventories || {};
                 window.inventories['{{ section_id }}'] = {};
                 {% for variant in variants_with_inventory_tracking %}
-                window.inventories['{{ section_id }}'][{{ variant.id }}] = {
-                    'quantity': {{ variant.inventory_quantity | default: 0 }},
-                    'policy': {{ variant.inventory_policy | json }},
-                    'incoming': '{{ variant.incoming | default: false }}',
-                    'next_incoming_date': {{ variant.next_incoming_date | date: format: 'date' | json }}
-                };
+                  window.inventories['{{ section_id }}'][{{ variant.id }}] = {
+                      'quantity': {{ variant.inventory_quantity | default: 0 }},
+                      'policy': {{ variant.inventory_policy | json }},
+                      'incoming': '{{ variant.incoming | default: false }}',
+                      'next_incoming_date': {{ variant.next_incoming_date | date: format: 'date' | json }}
+                  };
                 {% endfor %}
               </script>
 
-              {% comment %}
-                If loaded in quick view, it might be from a JS-loaded function
-                that loads recommended products. If that's the case, the above
-                JS will not set the variant inventory. Add it to an accessible
-                data div to read later instead.
-              {% endcomment %}
               {%- if isModal -%}
                 <div
                 data-section-id="{{ section_id }}"
@@ -244,6 +225,7 @@
               {%- endif -%}
             {% endif %}
           {% endcapture %}
+
           <div class="grid__item product-meta-top-mobile">
             {{ product_meta_top1 }}
             {{ product_meta_top2 }}  
@@ -271,16 +253,10 @@
                 {{ product_meta_top3 }}
               </div>
               <hr class="hr--medium">
-              <!-- need to remove  description_style schema -->
               {%- unless description_style == 'full' -%}
                 <div class="product-single__description rte desktop">{{ product.description }}</div>
               {%- endunless -%}
               {% unless isModal %}
-                {% comment %}
-                  Shopify's product form attaches a number of tracking
-                  scripts that cause slower load times and false statistics.
-                  Quick view modals request these on-demand.
-                {% endcomment %}
                 {%- render 'product-form-bbg',
                   section_id: section_id,
                   product: product,
